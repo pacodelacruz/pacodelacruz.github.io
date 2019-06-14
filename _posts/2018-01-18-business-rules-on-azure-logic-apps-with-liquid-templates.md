@@ -81,7 +81,7 @@ This template will create exactly the same output, but now it should be easier t
 <h3>The Workflow</h3>
 The Order processing Logic App workflow is instantiated by an HTTP call. Then we need to apply business rules to know the discount and whether the order must be manually approved. To do so, we will use the <strong>Transform JSON to JSON</strong> action to invoke the Liquid template with the business rules. We pass the order as the <strong>content</strong> parameter and the name of the Liquid template as the <strong>map</strong>. The Liquid template must be already in the Integration Account and the Integration account must be assigned to the Logic App workflow. Then the workflow will proceed with further processing, including the manual approval when required. A snapshot of the first part of the workflow is shown as follows.
 
-<img class="alignnone size-full wp-image-1126" src="https://pacodelacruzag.files.wordpress.com/2018/01/10-workflow-original.png" alt="10 Workflow Original"/>
+<img class="alignnone size-full wp-image-1126" src="/assets/img/2018/01/10-workflow-original.png" alt="10 Workflow Original"/>
 <h3>Implementing a generic Business Rules Engine</h3>
 Now, we know how to call externalised business rules using Liquid templates within Logic Apps workflows.
 
@@ -93,7 +93,7 @@ In my Logic App, I am accepting the name of the Liquid template as an Http heade
 
 The Logic App workflow is shown below, including the code behind the Apply Business Rules (Transform JSON to JSON) action.
 
-<img class="alignnone size-full wp-image-1127" src="https://pacodelacruzag.files.wordpress.com/2018/01/21-workflow-for-bre.png" alt="21 Workflow for BRE" />
+<img class="alignnone size-full wp-image-1127" src="/assets/img/2018/01/21-workflow-for-bre.png" alt="21 Workflow for BRE" />
 
 This Http Logic App, together with business rules as Liquid templates, can be used as a Business Rules Engine. Quite handy, don't you think? :)
 <h2>Considerations</h2>

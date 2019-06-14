@@ -6,7 +6,7 @@ author: Paco de la Cruz
 comments: true
 categories: [Azure, Azure iPaaS, CI/CD, Logic Apps]
 ---
-<img class=" aligncenter" src="http://pacodelacruzag.files.wordpress.com/2017/10/101117_0432_preparingaz1.png" alt="" />
+<img class=" aligncenter" src="/assets/img/2017/10/101117_0432_preparingaz1.png" alt="" />
 <h2> Introduction</h2>
 Logic Apps can be created from the <a href="https://portal.azure.com">Azure Portal</a>, or using <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-deploy-from-vs">Visual Studio</a>. This works well if you want to create one Logic App at a time. However, if you want to deploy the same Logic App in multiple environments, e.g. Dev, Test, or Production, you want to do it in an automated way. <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates">Azure Resource Manager (ARM) Templates</a> allow you to define Azure Resources, including Logic Apps, for automated deployment to multiple environments in a consistent and repeatedly way. ARM Templates can be tailored for each environment using a <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-authoring-templates">Parameters</a> file.
 
@@ -33,7 +33,7 @@ For this post, I will work with a rather simple scenario: A Logic App that is tr
 
 This very simple workflow created using the Logic App editor is shown below:
 
-<img class=" aligncenter" src="http://pacodelacruzag.files.wordpress.com/2017/10/101117_0432_preparingaz2.png" alt="" />
+<img class=" aligncenter" src="/assets/img/2017/10/101117_0432_preparingaz2.png" alt="" />
 
 And the code behind this workflow is as follows:
 
@@ -64,11 +64,11 @@ Once the Logic App is ready, we can get the ARM Template for CI/CD. One easy way
 
 The Cloud Explorer will allow you to log in to your Azure Subscription and see the supported Azure resources, including Logic Apps. When you expand the Logic Apps menu, you will see all the Logic Apps available for that subscription.
 
-<img class=" aligncenter" src="http://pacodelacruzag.files.wordpress.com/2017/10/101117_0432_preparingaz3.png" alt="" />
+<img class=" aligncenter" src="/assets/img/2017/10/101117_0432_preparingaz3.png" alt="" />
 
 Once you've found the Logic App you want to export, right click on it, and click on <strong>Open with Logic App Editor.</strong> This will open the Logic App Editor on Visual Studio.
 
-<img class=" aligncenter" src="http://pacodelacruzag.files.wordpress.com/2017/10/101117_0432_preparingaz4.png" alt="" />
+<img class=" aligncenter" src="/assets/img/2017/10/101117_0432_preparingaz4.png" alt="" />
 
 In addition to allowing to edit Logic Apps on Visual Studio, the Visual Studio Logic App Tools let you to download the ARM Template that includes the Logic App. You just need to click the <strong>Download </strong>button<strong>, </strong>and<strong>
 </strong>you will get an almost ready-to-deploy ARM Template. This functionality <strong>exports the Logic App API Connections</strong> as well. <strong>
@@ -88,7 +88,7 @@ As you can see, this ARM Template includes
 </ul>
 The structure of the ARM Template can be seen in the picture below.
 
-<img class=" aligncenter" src="http://pacodelacruzag.files.wordpress.com/2017/10/101117_0432_preparingaz5.png" alt="" />
+<img class=" aligncenter" src="/assets/img/2017/10/101117_0432_preparingaz5.png" alt="" />
 <h3>3. Set the Logic App parameters values with ARM Template expressions and functions.</h3>
 Once we have the ARM Template, we can set the Logic App parameters values with ARM expressions and functions, including ARM parameters or ARM variables. I've done it with my ARM Template as shown below.
 

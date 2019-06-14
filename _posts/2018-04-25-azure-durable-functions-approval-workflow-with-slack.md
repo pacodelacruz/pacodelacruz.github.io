@@ -6,13 +6,13 @@ author: Paco de la Cruz
 comments: true
 categories: [Azure Functions, Development, Durable Functions, Slack]
 ---
-<h2><img class=" size-full wp-image-1169 aligncenter" src="https://pacodelacruzag.files.wordpress.com/2018/06/00-feature.png" alt="00 Feature" width="532" height="385" /></h2>
+<h2><img class=" size-full wp-image-1169 aligncenter" src="/assets/img/2018/06/00-feature.png" alt="00 Feature" width="532" height="385" /></h2>
 <h2>Introduction</h2>
 Recently, I published a post about implementing an <a href="https://pacodelacruzag.wordpress.com/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener noreferrer">Approval Workflow on Azure Durable Functions with SendGrid</a>. In essence, this post is not very different to that one. However, I wanted to demonstrate the same pattern on Azure Durable Functions, but now using <a href="https://slack.com/" target="_blank" rel="noopener noreferrer">Slack</a> as a means of approval. My aim is to show how easy it is to implement this pattern by using a Restful API instead of an Azure Functions binding. What you see here could easily be implemented with your own custom APIs as well :).
 <h2>Scenario</h2>
 In my <a href="https://pacodelacruzag.wordpress.com/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener noreferrer">previous post</a>, I show how Furry Models Australia streamlined an approval process for aspiring cats to join the exclusive model agency by implementing a serverless solution on Azure Durable Functions and SendGrid. Now, after a great success, they’ve launched a new campaign targeting rabbits. However, for this campaign they need some customisation. The (rabbit) managers of this campaign have started to collaborate internally with Slack instead of email. Their aim is to significantly improve their current approval process based on phone and pigeon post by having an automated serverless workflow which leverages Slack as their internal messaging platform.
 
-<img class=" size-full wp-image-1170 aligncenter" src="https://pacodelacruzag.files.wordpress.com/2018/06/11-sorry.png" alt="11 Sorry" width="704" height="632" />
+<img class=" size-full wp-image-1170 aligncenter" src="/assets/img/2018/06/11-sorry.png" alt="11 Sorry" width="704" height="632" />
 <h2>Pre-requisites</h2>
 To build this solution, we need:
 <ul>
@@ -31,7 +31,7 @@ To build this solution, we need:
 <h2>Solution Overview</h2>
 The figure bellow, shows an overview of the solution we will build based on Durable Functions. As you can see, the workflow is very similar to the one implemented previously. Pictures of the aspiring rabbits are to be dropped in an Azure storage account blob container called <em>requests</em>. At the end of the approval workflow, pictures should be moved to the <em>approved</em> or <em>rejected</em> blob containers accordingly.
 
-<img class=" size-full wp-image-1171 aligncenter" src="https://pacodelacruzag.files.wordpress.com/2018/06/20-solution-overview1.png" alt="20 Solution Overview" width="784" height="727" />
+<img class=" size-full wp-image-1171 aligncenter" src="/assets/img/2018/06/20-solution-overview1.png" alt="20 Solution Overview" width="784" height="727" />
 
 The steps of the process are described as follows:
 <ol>
@@ -49,11 +49,11 @@ The steps of the process are described as follows:
 </ol>
 A sample of the Slack interactive message is shown below.
 
-<img class=" size-full wp-image-1172 aligncenter" src="https://pacodelacruzag.files.wordpress.com/2018/06/31-sample-message.png" alt="31 Sample Message" width="540" height="423" />
+<img class=" size-full wp-image-1172 aligncenter" src="/assets/img/2018/06/31-sample-message.png" alt="31 Sample Message" width="540" height="423" />
 
 Then, when the user clicks on any of the buttons, it will call the <em>HttpTrigger</em> function described in the step 7 above. Depending on the selection and the status of the orchestration, it will receive the corresponding response:
 
-<img class="alignnone size-full wp-image-1173" src="https://pacodelacruzag.files.wordpress.com/2018/06/32-sample-response.png" alt="32 Sample Response" width="505" height="88" />
+<img class="alignnone size-full wp-image-1173" src="/assets/img/2018/06/32-sample-response.png" alt="32 Sample Response" width="505" height="88" />
 <h2>The Solution</h2>
 The implemented solution code can be found in this <a href="https://github.com/pacodelacruz/durablefunctions" target="_blank" rel="noopener noreferrer">GitHub repo</a>. I’ve used the Azure Functions Runtime v2. I will highlight some relevant bits of the code below, and I hope that the code is self-explanatory 😉:
 <h3>TriggerApprovalByBlob.cs</h3>

@@ -4,15 +4,16 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+<img class="  wp-image-1151 alignleft" src="/assets/img/2018/06/paco-head-shot-mvp.jpg" alt="Corporate Headshot" width="318" height="421" />
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Hi there! Thanks for stopping by. This is Paco, I am software developer and architect recognised as Microsoft Azure MVP. I started my professional career back in 2001; and since then, I have been working as a consultant. This has allowed me to work for multiple organisations in many different industries and to learn from many different environments.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+As part of my journey <span style="text-decoration:underline;"><strong>trying</strong> </span>to make my tiny little "dent in the universe",  I have been blogging and speaking, <span style="text-decoration:underline;"><strong>hoping</strong></span> to promote <em>healthier</em> coding practices and more <em>balanced</em> cloud implementations ;)
+
+I am also certified as <em><a href="https://www.youracclaim.com/badges/30aff762-2e03-4090-81fc-dc705ea34109">MCSE: Cloud Platform and Infrastructure</a></em> and currently working as a consultant architecting, building and implementing Enterprise Cloud Applications and Integration Solutions based on Microsoft Azure.
+
+If you are interested in the topics you read here or have have any feedback or questions, I'd love to connect at:
+
+<a href="https://twitter.com/pacodelacruz"><img class="alignnone  wp-image-437" src="/assets/img/2015/03/twitter60.png" alt="twitter60" width="50" height="50" /></a> <a href="https://www.linkedin.com/in/pacodelacruz/"><img class="alignnone  wp-image-438" src="/assets/img/2015/03/linkedin80.png" alt="linkedin80" width="50" height="50" /></a>
 
 
-[jekyll-organization]: https://github.com/jekyll

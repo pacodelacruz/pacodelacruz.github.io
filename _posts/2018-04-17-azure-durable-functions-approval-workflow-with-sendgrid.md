@@ -22,7 +22,7 @@ In this post, I will show how to implement the <a href="https://docs.microsoft.
 <h2>Scenario</h2>
 To illustrate this pattern on Durable Functions, I will be using a fictitious cat model agency called Furry Models Australia. Furry Models is running a campaign to attract the most glamorous, attractive, and captivating cats in Australia. They will be receiving photos of all aspiring cats and they need a streamlined approval process to accept or reject those applications. Furry Models want to implement this in an agile manner with a short time-to-market and with a very cost-effective solution. They know that serverless is the way to go!
 
-<img class=" size-full wp-image-1161 aligncenter" src="https://pacodelacruzag.files.wordpress.com/2018/06/11-join-us1.png" alt="11 Join Us" width="570" height="598" />
+<img class=" size-full wp-image-1161 aligncenter" src="/assets/img/2018/06/11-join-us1.png" alt="11 Join Us" width="570" height="598" />
 <h2>Pre-requisites</h2>
 To build this solution, we will need:
 <ul>
@@ -34,7 +34,7 @@ The picture below shows an overview of the approval workflow solution I've build
 
 Pictures of the aspiring cats are to be dropped in an Azure storage blob container called <em>requests</em>. At the end of the approval workflow, pictures should be moved to the <em>approved</em> or <em>rejected</em> blob containers accordingly.
 
-<img class=" size-full wp-image-1164 aligncenter" src="https://pacodelacruzag.files.wordpress.com/2018/06/20-solution-overview.png" alt="20 Solution Overview" width="784" height="727" />
+<img class=" size-full wp-image-1164 aligncenter" src="/assets/img/2018/06/20-solution-overview.png" alt="20 Solution Overview" width="784" height="727" />
 
 The steps of the process are described as follows:
 <ol>
@@ -52,7 +52,7 @@ The steps of the process are described as follows:
 </ol>
 A sample of the email implemented is shown below.
 
-<img class="alignnone size-full wp-image-1166" src="https://pacodelacruzag.files.wordpress.com/2018/06/22b-sample-email.png" alt="22b Sample Email" width="600" />
+<img class="alignnone size-full wp-image-1166" src="/assets/img/2018/06/22b-sample-email.png" alt="22b Sample Email" width="600" />
 <h2>The Solution</h2>
 The implemented solution code can be found in this <a href="https://github.com/pacodelacruz/durablefunctions" target="_blank" rel="noopener noreferrer">GitHub repo</a>. I’ve used the Azure Functions Runtime v2. I will highlight some relevant bits of the code below, and I hope that the code is self-explanatory 😉:
 <h3>TriggerApprovalByBlob.cs</h3>

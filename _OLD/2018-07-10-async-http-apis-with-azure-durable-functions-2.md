@@ -6,7 +6,7 @@ author: Paco de la Cruz
 comments: true
 categories: [APIs, Azure, Azure Functions, Durable Functions, Uncategorized]
 ---
-<h2><img class="alignnone size-full wp-image-1187" src="https://pacodelacruzag.files.wordpress.com/2018/07/070618_1006_asynchttpap1.png" alt="070618_1006_AsyncHttpAP1.png" width="811" height="374" /></h2>
+<h2><img class="alignnone size-full wp-image-1187" src="/assets/img/2018/07/070618_1006_asynchttpap1.png" alt="070618_1006_AsyncHttpAP1.png" width="811" height="374" /></h2>
 <h2>Introduction</h2>
 Azure Durable Functions have support for <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-overview" target="_blank" rel="noopener noreferrer">different patterns</a>, which enable us to build serverless and stateful applications without worrying about the state management implementation details. One of these useful patterns is the <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-overview#pattern-3-async-http-apis" target="_blank" rel="noopener noreferrer">Asynchronous Http APIs</a>. This pattern comes in handy when client applications need to trigger long running processes exposed as APIs and do something else after a status is reached. You might be thinking that the best way to implement an async API is by enabling the API to raise an event once it finishes so the client can react to it. For instance via a webhook (Http callback request), <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-event-publishing" target="_blank" rel="noopener noreferrer">an Event Grid event</a>, or even using <a href="https://medium.com/@philippbauknecht/serverless-real-time-messaging-with-azure-functions-and-azure-signalr-service-c70e781ff3c3">SignalR</a>. That is true, however, in many cases, client apps cannot be modified, or there are security or networking restrictions which make polling the best or the only feasible alternative. In this post, I’ll describe how to implement the <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-overview#pattern-3-async-http-apis" target="_blank" rel="noopener noreferrer">Asynchronous Http API pattern</a> on Durable Functions based on the polling client approach.
 
@@ -18,7 +18,7 @@ The solution is based on Azure Durable Functions’ building blocks, including o
 
 The diagram below shows the different components of the solution. As you can see, there is a client app which submits the application by calling the <code>Submit</code> Azure function, and then can get the status of the application by calling a GET <code>Status</code> Azure function. The orchestration function controls the process and calls the activity functions.
 
-<img class="alignnone size-full wp-image-1188" src="https://pacodelacruzag.files.wordpress.com/2018/07/070618_1006_asynchttpap2.png" alt="070618_1006_AsyncHttpAP2.png" width="792" height="484" />
+<img class="alignnone size-full wp-image-1188" src="/assets/img/2018/07/070618_1006_asynchttpap2.png" alt="070618_1006_AsyncHttpAP2.png" width="792" height="484" />
 <h2>Solution Components</h2>
 The main components of the solution are described below. The comments in the code should also help you to better understand each of them. You can find the <a href="https://github.com/pacodelacruz/DurableFunctions-AsyncHttpApi" target="_blank" rel="noopener noreferrer">full solution sample code here</a>.
 <h3>Submit Function</h3>

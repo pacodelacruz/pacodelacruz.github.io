@@ -6,7 +6,7 @@ author: Paco de la Cruz
 comments: true
 categories: [API Management, Azure, Azure Functions, Azure iPaaS, Logic Apps, Microsoft iPaaS, Service Bus]
 ---
-Originally posted on <a href="http://www.mexia.com.au/blog/2017/02/10/azure-integration-platform-as-a-service-ipaas/">Mexia's blog</a>.
+
 <h1>Introduction</h1>
 If you work for an established organisation going through <a href="http://www.cio.com/article/3063620/it-strategy/digital-transformation-why-its-important-to-your-organization.html">Digital Transformation</a> or in a modern company born in the digital era, the chances are that IT is required to implement integration solutions more than ever before. Whether an organisation is <a href="http://economics.mit.edu/files/11347">an incumbent or a new entrant</a>, they need to leverage the power of technology to lead the change or embrace it. Monolithic systems will not be capable of meeting the needs of digital organisations, creating the need to interconnect existing systems with best-of-breed cloud and distributed apps and to expose all these systems to other systems, business partners or consumer apps through easy to consume <a href="https://en.wikipedia.org/wiki/Application_programming_interface">APIs</a>.
 
@@ -267,3 +267,6 @@ The breadth and capabilities of many different Azure technologies and how they c
 Thanks for reading, and please share your thoughts or queries on this topic below <span style="font-family:Wingdings;">J</span>
 
 Happy clouding!
+
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a>
+<span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

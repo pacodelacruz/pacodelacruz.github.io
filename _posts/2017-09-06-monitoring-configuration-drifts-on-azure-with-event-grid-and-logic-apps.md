@@ -7,7 +7,7 @@ comments: true
 categories: [Azure, Azure Automation, Azure Resource Manager, Event Grid, Logic Apps, Serverless]
 ---
 <h2>Introduction</h2>
-Azure <a href="https://azure.microsoft.com/en-au/services/event-grid/">Event Grid</a> is a first-class and hyperscale eventing platform with intelligent filtering that <a href="https://azure.microsoft.com/en-au/blog/introducing-azure-event-grid-an-event-service-for-modern-applications/">has recently been released</a> in preview and is a real game changer to build event-driven serverless apps on Azure. There have been many other posts, including <a href="https://blog.mexia.com.au/serverless-logging-alerting-with-service-fabric-azure-event-grid">this one</a> from my colleague <a href="https://twitter.com/daniel2me">Dan Toomey</a>, which highlights all the magic, features and benefits of this new offering on Azure. Thus, I don't pretend to reiterate over these on this post. My goal is, however, to try to show how to solve a requirement that I have heard more than a couple of times.
+Azure <a href="https://azure.microsoft.com/en-au/services/event-grid/">Event Grid</a> is a first-class and hyperscale eventing platform with intelligent filtering that <a href="https://azure.microsoft.com/en-au/blog/introducing-azure-event-grid-an-event-service-for-modern-applications/">has recently been released</a> in preview and is a real game changer to build event-driven serverless apps on Azure. There have been many other posts, including <a href="https://platform.deloitte.com.au/articles/serverless-logging-alerting-with-service-fabric-azure-event-grid">this one</a> from my colleague <a href="https://twitter.com/daniel2me">Dan Toomey</a>, which highlights all the magic, features and benefits of this new offering on Azure. Thus, I don't pretend to reiterate over these on this post. My goal is, however, to try to show how to solve a requirement that I have heard more than a couple of times.
 
 As mentioned <a href="https://azure.microsoft.com/en-au/services/event-grid/">here</a>, there are three typical scenarios where Azure Event Grid comes quite handy:
 <ol>
@@ -37,7 +37,7 @@ This solution requires the following:
 	<li>
 <div>An Azure App Service (Web App) with some app settings configured, in my case, I configured the app settings as follows:</div>
 <div></div>
-<img src="http://pacodelacruzag.files.wordpress.com/2017/09/090617_1144_monitoringc1.png" alt="" /></li>
+<img src="/assets/img/2017/09/090617_1144_monitoringc1.png" alt="" /></li>
 	<li>
 <div>A JSON definition of the "Desired State" of the app settings stored in an Azure Storage Blob Container, in my scenario this is as below:</div>
 <pre><code>{
@@ -60,7 +60,7 @@ My solution implemented as a Logic App workflow with an Event Grid Trigger will 
 </ol>
 Below I described the two main steps of the workflow in more details
 <h3>1. Configuring the Logic Apps Event Grid Trigger</h3>
-<img src="http://pacodelacruzag.files.wordpress.com/2017/09/090617_1144_monitoringc2.png" alt="" />
+<img src="/assets/img/2017/09/090617_1144_monitoringc2.png" alt="" />
 
 To configure the trigger, we need to specify:
 <ol>
@@ -79,17 +79,17 @@ Once we execute a Logic App with this trigger, we should get a payload similar t
 <h3>2. Configuring the Logic App Azure Resource Manager Connector</h3>
 Logic Apps provide an <strong>Azure Resource Manager connector</strong>, which allows us to do CRUD operations on Azure via Azure Resource Manager. In our scenario, we are going to use the <strong>Invoke Resource Operation</strong> to List the App Settings of a Web App. This will return the current (new) state of the Azure Resource, so we can compare it to the Desired State later on the workflow. In your own scenario, you can make use of other operations, like <strong>List Resources by Resource Group</strong>, <strong>Read a Resource</strong>, or <strong>Read a Resource Group</strong> to get the state of your Azure resources. The configuration applied for our scenario is as follows.
 
-<img src="http://pacodelacruzag.files.wordpress.com/2017/09/090617_1144_monitoringc3.png" alt="" />
+<img src="/assets/img/2017/09/090617_1144_monitoringc3.png" alt="" />
 <h3>The Logic App Workflow</h3>
 The implemented solution as a Logic App workflow is shown below. I hope it is self-explanatory. I included comments on each action to make it easier to follow.
 
-<img src="http://pacodelacruzag.files.wordpress.com/2017/09/090617_1144_monitoringc4.png" alt="" />
+<img src="/assets/img/2017/09/090617_1144_monitoringc4.png" alt="" />
 
 Quite straightforward, isn't?
 
 And in case you are wondering about the code behind, below is the same workflow showing the code view of the relevant actions.
 
-<img src="http://pacodelacruzag.files.wordpress.com/2017/09/090617_1144_monitoringc5.png" alt="" />
+<img src="/assets/img/2017/09/090617_1144_monitoringc5.png" alt="" />
 
 If you want to have a look at the ARM template, including the full code behind of this Logic App, you can check it out <a href="https://gist.github.com/pacodelacruz/3787feb1068ddabf3d3390c837eb7ea4">here</a>.
 <h2>Wrapping Up</h2>

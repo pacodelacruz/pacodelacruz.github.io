@@ -9,7 +9,7 @@ categories: [Azure, Azure iPaaS, BizTalk, iPaaS, Logic Apps, Microsoft iPaaS, Un
 <h2>Summary</h2>
 Business are evolving increasingly fast, and IT can be an enabler or a deterrent of this evolution. IT changes should always bring business value and never compromise core business needs.
 
-As part of becoming more agile, a common concern for many of our customers is the transition from on-premises integration platforms to a cloud or hybrid solution, in particular migrating their BizTalk Server environments to the <a href="https://blog.mexia.com.au/microsoft-azure-ipaas" target="_blank" rel="noopener">Microsoft Azure Integration Platform-as-a-Service (iPaaS)</a>, which is based on Azure Logic Apps.
+As part of becoming more agile, a common concern for many of our customers is the transition from on-premises integration platforms to a cloud or hybrid solution, in particular migrating their BizTalk Server environments to the <a href="https://platform.deloitte.com.au/articles/microsoft-azure-ipaas" target="_blank" rel="noopener">Microsoft Azure Integration Platform-as-a-Service (iPaaS)</a>, which is based on Azure Logic Apps.
 
 There are a number of reasons you might want to consider migrating your BizTalk solutions to the Microsoft Azure iPaaS, including:
 <ol>

@@ -54,4 +54,5 @@ If you are interested in more posts about patterns on Durable Functions, you can
 	<li><a href="https://pacodelacruzag.wordpress.com/2018/04/25/azure-durable-functions-approval-workflow-with-slack/" target="_blank" rel="noopener">Azure Durable Functions Pattern: Approval Workflow with Slack</a></li>
 </ul>
 Happy clouding!
-<p style="text-align:center;"><em>Cross-posted on <a href="https://blog.mexia.com.au/author/paco-de-la-cruz" target="_blank" rel="noopener">Mexia’s Blog</a>. Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener">@pacodelacruz</a>.</em></p>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a>
+<span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

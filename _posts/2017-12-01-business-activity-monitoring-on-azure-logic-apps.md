@@ -13,7 +13,7 @@ All these tools are great for developers or system administrators, who want to m
 
 In this post, I will show how to implement tracking capabilities for business-related information and how to create a <a href="https://en.wikipedia.org/wiki/Business_activity_monitoring">Business Activity Monitoring</a> (BAM) dashboard for Logic Apps.
 <h2>Scenario</h2>
-In a <a href="https://blog.mexia.com.au/correlation-identifier-pattern-on-logic-apps">previous post</a>, I introduced a fictitious company called "Farm to Table", which provides fresh produce drone delivery. This company has been leveraging Logic Apps to implement their business processes, which integrate with multiple systems on the cloud. As part of their requirements they need to monitor the business activity flowing through this integration solution.
+In a <a href="https://platform.deloitte.com.au/articles/correlation-identifier-pattern-on-logic-apps">previous post</a>, I introduced a fictitious company called "Farm to Table", which provides fresh produce drone delivery. This company has been leveraging Logic Apps to implement their business processes, which integrate with multiple systems on the cloud. As part of their requirements they need to monitor the business activity flowing through this integration solution.
 
 "Farm to Table" want to be able to monitor the orders they are receiving per channel. At the moment, customers can place orders via SMS, a web online store, and a mobile app. They also want to be able to track orders placed using customer number and order number.
 <h2>Solution</h2>
@@ -56,7 +56,7 @@ The query below returns the custom data I'm tracking on the Logic App workflow. 
 
 This query should return a result set as the one below:
 
-<img src="http://pacodelacruzag.files.wordpress.com/2017/12/120117_0738_businessact1.png" alt="" />
+<img src="/assets/img/2017/12/120117_0738_businessact1.png" alt="" />
 
 Additionally, we can add filters to our queries, for instance, to get all orders by the CustomerId, we could use a query as follows:
 
@@ -79,7 +79,7 @@ The steps to create and shared an Azure Dashboard to include Log Analytics data 
 
 Once we get the results, we need to select Chart and then the Doughnut option. After that, we are ready to pin our chart to the Azure shared dashboard.
 
-<img class="alignnone size-full wp-image-1106" src="https://pacodelacruzag.files.wordpress.com/2017/12/15-chart-count-by-channel.gif" alt="15 Chart Count By Channel" width="1528" height="876" />
+<img class="alignnone size-full wp-image-1106" src="/assets/img/2017/12/15-chart-count-by-channel.gif" alt="15 Chart Count By Channel" width="1528" height="876" />
 
 <strong>Order Total by Date and Channel
 </strong>
@@ -92,11 +92,11 @@ The company also want to have a chart with the order total summarised by date an
 
 Once we get the results, we need to select Chart and then Stacked Columns. After that, we are ready to pin our chart to the Azure shared dashboard.
 
-<img class="alignnone size-full wp-image-1107" src="https://pacodelacruzag.files.wordpress.com/2017/12/16-chart-total-by-date.gif" alt="16 Chart Total By Date" width="1528" height="876" />
+<img class="alignnone size-full wp-image-1107" src="/assets/img/2017/12/16-chart-total-by-date.gif" alt="16 Chart Total By Date" width="1528" height="876" />
 <h3>Business Activity Monitoring Dashboard</h3>
 Once we have pinned our charts, we would be able to see them in our Azure shared dashboard. These charts are very handy and allow us to dynamically visualise the data as shown below.
 
-<img class="alignnone size-full wp-image-1108" src="https://pacodelacruzag.files.wordpress.com/2017/12/20-bam-dashboard.gif" alt="20 BAM Dashboard" width="1696" height="656" />
+<img class="alignnone size-full wp-image-1108" src="/assets/img/2017/12/20-bam-dashboard.gif" alt="20 BAM Dashboard" width="1696" height="656" />
 <h2>Wrapping-up</h2>
 In this post, we've seen how to easily track and monitor business information flowing through our Logic Apps, using Logic App native integration with OMS and Azure Log Analytics. Additionally, we've seen how friendly and cool the Log Analytics charts are. This gives Logic Apps another great competitive advantage as an enterprise-grade integration Platform as a Service (iPaaS) in the market.
 

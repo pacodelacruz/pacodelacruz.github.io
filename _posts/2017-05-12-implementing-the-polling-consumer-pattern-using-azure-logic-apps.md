@@ -45,38 +45,38 @@ After describing the scenario, let's start having fun with the implementation. T
 Each step is described in detail as follows,
 <h3>1. Create an Azure Resource Group</h3>
 You might already have an Azure Resource Group which contains other resources for your solution. If that's the case you can skip this step. I will start creating a new Resource Group for all resources I will be using for this demo. I'll name it <strong>'pacopollingconsumer-rgrp'</strong>
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin1.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin1.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 
 <h3>2. Create an Azure Storage Account, create a Table, and populate the Table with the Polling Watermark</h3>
 Once I have my Azure Resource Group, I'm going to create an Azure Storage Account. I'll use this Storage Account to create a Table to persist my polling watermark. I want to create a framework that can be used for more than one scenario; whether it's polling changes from different entities from the same source system, or from more than one source system. So, I'll prepare my table to handle more than one entity and more than one source system. I'll name the table '<strong>pacopollingconsumerstrg'</strong> and use the default settings.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin2.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin2.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 Once I've created the Storage Account, I'll create a table. I'll use the <a href="http://storageexplorer.com/">Azure Storage Explorer</a> for this. Once, I've downloaded it, I will open it and add my Azure Account by signing in to Azure.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin3.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin3.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 After signing in, I select my subscription. Then, I should be able to see all my existing Storage Accounts
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin4.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin4.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 I create a new Table by right clicking on the Tables branch
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin5.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin5.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 I'll name the new Table <strong>'PollingWatermark'</strong>
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin6.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin6.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 Once the Table has been created, I'll add a new Entity
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin7.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin7.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 As mentioned above, I want to be able to use this table to handle more than one entity and more than one source system. I'll use the Table <strong>PartitionKey</strong> to store the <strong>Source System</strong>, which for this demo I'll use <strong>'HRSystem'</strong>, and the <strong>RowKey</strong> to store the <strong>Entity</strong>, which will be <strong>'EmployeeNewHire'</strong>. I will create a new column of time <strong>DateTime</strong> to store my <strong>Watermark</strong>, and I will set my initial value. Bear in mind that the Azure Storage Explore works with local time, however, the value will be stored in UTC.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin8.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin8.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 Cool, now we have our Azure Table Storage ready :)
 <h3>3. Create the Azure Function App</h3>
 At the time of writing this post, there is no Logic App connector for Azure Table Storage. There is already a user voice for it <a href="https://feedback.azure.com/forums/287593-logic-apps/suggestions/9995193-azure-table-storage-connector">here</a>, and if you want it, I would suggest you to vote for it. (I already did ;) ) In the absence of a Logic App connector for Azure Storage Table, we will be using an Azure Function App for it. I'll create an Azure Function App called <strong>'pacopollingconsumer-func'</strong> on my resource group, using the recently created storage account for its logs, and will use the <strong>consumption plan</strong> option, which is priced based on execution, as explained <a href="https://azure.microsoft.com/en-au/pricing/details/functions/">here</a>.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin9.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin9.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 Once I've created my Function App, I'll download the publish profile which I'll be using later to publish my functions.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin10.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin10.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 
 <h3>4. Develop and Deploy the Azure Functions</h3>
@@ -88,7 +88,7 @@ Some notes in regard to my <strong>'PacodelaCruz.PollingConsumer.FunctionApp'</s
 	<li>You will need to update the External program and Working Directory paths in the Project Properties / Web as <a href="https://blogs.msdn.microsoft.com/appserviceteam/2017/03/16/publishing-a-net-class-library-as-a-function-app/">described here</a>.<strong>
 </strong></li>
 </ul>
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin11.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin11.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 
 <ul>
@@ -140,7 +140,7 @@ Now, let's have a look at the Functions code:
 <p/>
 
 Once you have updated the <strong>appsettings.json</strong> file with your own connection strings, you can test your functions locally. You can use <a href="https://www.getpostman.com/">PostMan</a> for this. On Visual Studio, hit F5, and wait until the Azure Functions CLI starts. You should see the URL to run the functions as shown below.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin12.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin12.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 Once your project is running, you can then call the functions from PostMan by adding the corresponding query parameters. By calling the <strong>GetPollingWatermark</strong> function hosted locally, you should get the PollingWatermark, as previously set, as a JSON object.
 
@@ -152,16 +152,16 @@ To call the <strong>UpdatePollingWatermark</strong> function you need to use the
 
 <span style="background-color:#fafafa;">[<strong>PATCH</strong>] http://localhost:7071/api/<strong>UpdatePollingWatermark</strong>
 </span>
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin14.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin14.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 After having successfully tested both functions, we are ready to publish our Function App project. To do so, we have to <strong>right click</strong> on the project, and then click <strong>Publish</strong>. This will allow us to import the Publish Profile that we downloaded previously in one of the first steps described above.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050217_1240_implementin15.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050217_1240_implementin15.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 After having successfully published the Azure Function, now we need to configure the connection strings on the Azure Function <strong>app settings</strong>. You will need to add a new app setting called <strong>PollingWatermarkStorage</strong> and set the value to the connection string of the storage account containing the PollingWatermark table.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050417_1244_implementin1.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050417_1244_implementin1.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 Now you should be able to test the functions hosted on Azure. You need to go to your Function App, navigate to the corresponding function, and get the function URL. As I set the authentication level to function, a function key will be contained in the URL.
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050417_1244_implementin2.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050417_1244_implementin2.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 Bear in mind that we need to add the corresponding query params or request body. Your URLs should be something like:
 
@@ -178,7 +178,7 @@ Now that we have implemented the required Azure Function, we are ready to build 
 	<li><strong>Call a nested Logic App</strong>. Because the Atom Feed is a batch of entries, on the nested Logic App, I will be implementing debatching using <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-loops-and-scopes">SplitOn</a>. You can also use ForEach and send each entry to an Azure Service Bus queue or topic.</li>
 	<li><strong>Function </strong>action to update the polling watermark for the next poll by calling the <strong>UpdatePollingWatermark</strong> function with the PATCH method and passing as request body the response obtained from the previous function call.</li>
 </ul>
-<p style="text-align:center;"><img src="http://pacodelacruzag.files.wordpress.com/2017/05/050417_1244_implementin3.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
+<p style="text-align:center;"><img src="/assets/img/2017/05/050417_1244_implementin3.png" alt="" /><span style="font-family:Times New Roman;font-size:12pt;">
 </span></p>
 In case it's of help, you can have a look at the code view of the Logic App. Just bear in mind that I removed some sensitive information.
 
@@ -194,4 +194,5 @@ As discussed above, you can implement the same pattern with slight variations to
 
 I hope this has been of help, and happy clouding!
 
-Cross posted on <a href="https://www.mexia.com.au/polling-consumer-pattern-using-azure-logic-apps/">Mexia's Blog</a>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a>
+<span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>
