@@ -4,7 +4,8 @@ title: Monitoring Azure WebJobs Health with Application Insights
 date: 2016-08-11 22:12
 author: Paco de la Cruz
 comments: true
-categories: [Application Insights, Azure, Azure WebJobs, Monitor]
+category: Operations
+tags: [Application Insights, Azure, Azure WebJobs, Monitoring]
 ---
 
 ![](/assets/img/2016/08/081116_1230_monitoringa1.png)

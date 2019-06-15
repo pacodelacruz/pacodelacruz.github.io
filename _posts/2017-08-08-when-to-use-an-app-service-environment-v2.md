@@ -4,7 +4,8 @@ title: When to Use an Azure App Service Environment v2 (App Service Isolated)
 date: 2017-08-08 23:05
 author: Paco de la Cruz
 comments: true
-categories: [App Service, App Service Isolated, Architecture, Azure, Azure App Service Environment]
+category: Architecture
+tags: [App Service, App Service Isolated, Architecture, Azure, Azure App Service Environment]
 ---
 <p style="text-align:center;"><img class="aligncenter" src="https://www.mexia.com.au/wp-content/uploads/2017/08/080817_1153_WhentoUsean1.png" alt="" /></p>
 

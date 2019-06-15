@@ -4,7 +4,8 @@ title: Monitoring Configuration Drifts on Azure with Event Grid and Logic Apps
 date: 2017-09-06 22:30
 author: Paco de la Cruz
 comments: true
-categories: [Azure, Azure Automation, Azure Resource Manager, Event Grid, Logic Apps, Serverless]
+category: Operations
+tags: [Azure, Azure Automation, Azure Resource Manager, Event Grid, Logic Apps, Serverless]
 ---
 <h2>Introduction</h2>
 Azure <a href="https://azure.microsoft.com/en-au/services/event-grid/">Event Grid</a> is a first-class and hyperscale eventing platform with intelligent filtering that <a href="https://azure.microsoft.com/en-au/blog/introducing-azure-event-grid-an-event-service-for-modern-applications/">has recently been released</a> in preview and is a real game changer to build event-driven serverless apps on Azure. There have been many other posts, including <a href="https://platform.deloitte.com.au/articles/serverless-logging-alerting-with-service-fabric-azure-event-grid">this one</a> from my colleague <a href="https://twitter.com/daniel2me">Dan Toomey</a>, which highlights all the magic, features and benefits of this new offering on Azure. Thus, I don't pretend to reiterate over these on this post. My goal is, however, to try to show how to solve a requirement that I have heard more than a couple of times.

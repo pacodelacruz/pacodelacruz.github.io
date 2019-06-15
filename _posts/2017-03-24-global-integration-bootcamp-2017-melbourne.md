@@ -4,7 +4,8 @@ title: My presentation at the Global Integration Bootcamp 2017 Melbourne about L
 date: 2017-03-24 17:00
 author: Paco de la Cruz
 comments: true
-categories: [Azure Functions, Conference, Logic Apps, Serverless]
+category: Speaking
+tags: [Azure Functions, Speaking, Logic Apps, Serverless]
 ---
 I participated as a speaker in the <a href="https://www.globalintegrationbootcamp.com/">Global Integration Bootcamp</a> 2017, Melbourne. The bootcamp was very hands-on and participants had the chance to work with Azure API Management, Logic Apps, Azure Functions, BizTalk Server, Service Bus, and API Apps. My session was about using Logic Apps and Azure Functions to build Serverless Integration Solutions. In case you are interested, here are my slides. I hope they are helpful and you enjoy them.
 

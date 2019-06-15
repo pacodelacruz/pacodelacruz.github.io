@@ -4,7 +4,8 @@ title: Externalising Business Rules on Azure Logic Apps using Liquid Templates
 date: 2018-01-18 09:40
 author: Paco de la Cruz
 comments: true
-categories: [Azure, Business Rules Engine, Liquid Templates, Logic Apps]
+category: Logic Apps
+tags: [Azure, Business Rules Engine, Liquid Templates, Logic Apps]
 ---
 <h2>Introduction</h2>
 In Azure Logic Apps workflows, you can implement <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-use-logic-app-features#conditions-run-steps-only-after-meeting-a-condition">conditions</a> and <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-switch-case">switch cases</a> to control the flow based on runtime inputs and outputs. This functionality is quite useful, and in many cases, can be used to implement the business rules required. However, those business rules are inherent to the workflow, and when business rules change often, they would end up being hard to maintain.
@@ -24,7 +25,7 @@ In this post, I’ll show how to implement business rules in Logic Apps using Li
 <h2>Scenario</h2>
 &nbsp;
 
-<a href="https://pacodelacruzag.wordpress.com/2017/07/17/correlation-identifier-pattern-on-logic-apps/">Farm to Table</a>, the fresh produce drone delivery company, want to implement some business rules to be applied when receiving orders. All the order processing is currently handled by Logic Apps. These business rules can change over time, and they want to be able to update them with the minimal effort (think of development, testing and deployment). They have two main business rules: 1) to define whether an order must be manually approved and 2) applying discounts based on promotions. Promotions rules change much more often than approval rules. Because these rules change often, they want to externalise them from the Logic App workflow.
+<a href="/2017/07/17/correlation-identifier-pattern-on-logic-apps/">Farm to Table</a>, the fresh produce drone delivery company, want to implement some business rules to be applied when receiving orders. All the order processing is currently handled by Logic Apps. These business rules can change over time, and they want to be able to update them with the minimal effort (think of development, testing and deployment). They have two main business rules: 1) to define whether an order must be manually approved and 2) applying discounts based on promotions. Promotions rules change much more often than approval rules. Because these rules change often, they want to externalise them from the Logic App workflow.
 
 They want to implement the following business rules:
 <ul>

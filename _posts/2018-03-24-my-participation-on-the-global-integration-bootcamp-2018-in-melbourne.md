@@ -4,7 +4,8 @@ title: My participation on the Global Integration Bootcamp 2018 in Melbourne
 date: 2018-03-24 10:34
 author: Paco de la Cruz
 comments: true
-categories: [Azure Integration Services, Azure iPaaS, Conference, Logic Apps]
+category: Speaking
+tags: [Azure Integration Services, Azure iPaaS, Speaking, Logic Apps]
 ---
 This year, we had the second edition of the Global Integration Bootcamp, an event focused on the integration platforms of Microsoft. I participated talked about what's new on Microsoft's Azure iPaaS, also know as Azure Integration Services. Here my slides:
 

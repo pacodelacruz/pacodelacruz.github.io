@@ -4,7 +4,8 @@ title: Azure Durable Functions vs Logic Apps - How to choose?
 date: 2018-05-10 12:09
 author: Paco de la Cruz
 comments: true
-categories: [Architecture, Azure Functions, Azure iPaaS, Development, Durable Functions, iPaaS, Logic Apps, Microsoft iPaaS]
+category: Architecture
+tags: [Architecture, Azure Functions, Azure iPaaS, Development, Durable Functions, iPaaS, Logic Apps, Microsoft iPaaS]
 ---
 <h2><img class=" size-full wp-image-1176 aligncenter" src="/assets/img/2018/06/01-feature.png" alt="01 Feature" width="594" height="255" /></h2>
 <h2>Introduction</h2>
@@ -41,7 +42,7 @@ For some people the development experience might be a very key factor when decid
 </table>
 Durable Functions allow you to use imperative code you might already be familiar with, but you still need to understand the constraints of this extension. Logic Apps might require you to learn to use a new development environment, but which is relatively straight forward and quite handy for scenarios where less coding is the preference.
 <h2>Connectivity</h2>
-<a href="https://pacodelacruzag.wordpress.com/2018/02/02/microsoft-azure-ipaas-2/" target="_blank" rel="noopener noreferrer">Logic Apps is an integration platform</a>, thus, it truly offers better connectivity than Azure Durable Functions. Some details to consider are described in the table as follows.
+<a href="/2018/02/02/microsoft-azure-ipaas-2/" target="_blank" rel="noopener noreferrer">Logic Apps is an integration platform</a>, thus, it truly offers better connectivity than Azure Durable Functions. Some details to consider are described in the table as follows.
 <table style="border-collapse:collapse;border-color:#757575;" border="0">
 <tbody>
 <tr>
@@ -54,7 +55,7 @@ Durable Functions allow you to use imperative code you might already be famili
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;">The list of supported bindings is <a href="https://docs.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings#supported-bindings" target="_blank" rel="noopener noreferrer">here</a>. Some of these bindings support triggering a function, or are inputs or outputs. The list of bindings is growing, especially for the Functions runtime version 2.
 
 Additionally, as Azure Functions can be triggered by Event Grid events, any <a href="https://docs.microsoft.com/en-us/azure/event-grid/overview#event-sources" target="_blank" rel="noopener noreferrer">Event Grid Publishers</a> can potentially become a trigger of Azure Functions.</td>
-<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">Logic Apps provide <a href="https://pacodelacruzag.wordpress.com/2018/02/02/microsoft-azure-ipaas-2/" target="_blank" rel="noopener noreferrer">more than 200 connectors</a>, and the list just keeps growing. Among these, there are protocol connectors, Azure Services connectors, Microsoft SaaS connectors, and third-Party SaaS Connectors.
+<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">Logic Apps provide <a href="/2018/02/02/microsoft-azure-ipaas-2/" target="_blank" rel="noopener noreferrer">more than 200 connectors</a>, and the list just keeps growing. Among these, there are protocol connectors, Azure Services connectors, Microsoft SaaS connectors, and third-Party SaaS Connectors.
 
 Some of these connectors can trigger Logic App workflows, while others support getting and pushing data as part of the workflow.</td>
 </tr>
@@ -122,13 +123,13 @@ Custom Status value is not currently supported out-of-the-box. If required, you 
 </tr>
 <tr>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;text-align:right;"><strong>Approval Workflow (Human Interaction) Pattern</strong></td>
-<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">The Human Interaction (Approval Workflow) Pattern can be implemented <a href="https://pacodelacruzag.wordpress.com/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener noreferrer">as described here</a>.</td>
-<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">Approval Workflows can be implemented <a href="https://docs.microsoft.com/en-us/azure/logic-apps/tutorial-process-mailing-list-subscriptions-workflow" target="_blank" rel="noopener noreferrer">with the out-of-the box connectors</a> or custom as <a href="https://pacodelacruzag.wordpress.com/2017/07/17/correlation-identifier-pattern-on-logic-apps/" target="_blank" rel="noopener noreferrer">described here</a>.</td>
+<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">The Human Interaction (Approval Workflow) Pattern can be implemented <a href="/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener noreferrer">as described here</a>.</td>
+<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">Approval Workflows can be implemented <a href="https://docs.microsoft.com/en-us/azure/logic-apps/tutorial-process-mailing-list-subscriptions-workflow" target="_blank" rel="noopener noreferrer">with the out-of-the box connectors</a> or custom as <a href="/2017/07/17/correlation-identifier-pattern-on-logic-apps/" target="_blank" rel="noopener noreferrer">described here</a>.</td>
 </tr>
 <tr>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;text-align:right;"><strong>Correlation Pattern</strong></td>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">The Correlation Pattern can be implemented not only when there is human interaction, but for broader scenarios in the same way as described above.</td>
-<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">The Correlation Pattern can easily be implemented using the <a href="https://pacodelacruzag.wordpress.com/2017/07/17/correlation-identifier-pattern-on-logic-apps/" target="_blank" rel="noopener noreferrer">webhook action</a> or with <a href="/logic-apps-correlation-and-message-dependency-management-on-logic-apps-with-service-bus" target="_blank" rel="noopener noreferrer">Service Bus sessions</a>.</td>
+<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">The Correlation Pattern can easily be implemented using the <a href="/2017/07/17/correlation-identifier-pattern-on-logic-apps/" target="_blank" rel="noopener noreferrer">webhook action</a> or with <a href="/logic-apps-correlation-and-message-dependency-management-on-logic-apps-with-service-bus" target="_blank" rel="noopener noreferrer">Service Bus sessions</a>.</td>
 </tr>
 <tr>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;text-align:right;"><strong>Programmatic instance management</strong></td>
@@ -184,7 +185,7 @@ Additionally, you need to consider some <a href="https://docs.microsoft.com/en-
 <tr>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;"><strong>CI/CD</strong></td>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;">Durable Functions builds and deployments can be automated using <a href="https://blogs.msdn.microsoft.com/visualstudioalmrangers/2017/10/04/azure-function-ci-cd-devops-pipeline/" target="_blank" rel="noopener noreferrer">VSTS build and release pipelines</a>. Additionally, other build and release management tools can be used.</td>
-<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">Logic Apps are deployed using ARM Templates as <a href="https://pacodelacruzag.wordpress.com/2017/10/11/preparing-azure-logic-apps-for-cicd/" target="_blank" rel="noopener noreferrer">described here</a>.</td>
+<td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">Logic Apps are deployed using ARM Templates as <a href="/2017/10/11/preparing-azure-logic-apps-for-cicd/" target="_blank" rel="noopener noreferrer">described here</a>.</td>
 </tr>
 <tr>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;"> <strong>Versioning</strong></td>
@@ -220,7 +221,7 @@ You can find <a href="https://docs.microsoft.com/en-us/azure/azure-functions/du
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;">To monitor workflow instances, you need to use Application Insights Query Language to <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-diagnostics#application-insights" target="_blank" rel="noopener noreferrer">build your custom queries and dashboards</a>.</td>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;vertical-align:top;">The <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-monitor-your-logic-apps-oms" target="_blank" rel="noopener noreferrer">Logic Apps blade</a> and <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-monitor-your-logic-apps-oms#view-your-logic-app-runs-in-your-log-analytics-workspace" target="_blank" rel="noopener noreferrer">Log Analytics workspace</a> solution for Logic Apps provide very rich and friendly visual tools for monitoring.
 
-Furthermore, you can <a href="https://pacodelacruzag.wordpress.com/2017/12/01/business-activity-monitoring-on-azure-logic-apps/" target="_blank" rel="noopener noreferrer">build your own monitoring dashboards</a> and <a href="https://pacodelacruzag.wordpress.com/2017/12/07/publishing-custom-queries-of-logic-apps-execution-logs/" target="_blank" rel="noopener noreferrer">queries</a>.</td>
+Furthermore, you can <a href="/2017/12/01/business-activity-monitoring-on-azure-logic-apps/" target="_blank" rel="noopener noreferrer">build your own monitoring dashboards</a> and <a href="/2017/12/07/publishing-custom-queries-of-logic-apps-execution-logs/" target="_blank" rel="noopener noreferrer">queries</a>.</td>
 </tr>
 <tr>
 <td style="padding-left:14px;padding-right:14px;border:.5pt solid;"><strong>Resubmitting</strong></td>
@@ -277,6 +278,10 @@ It’s also worth mentioning that in most cases, the operation costs of Logic Ap
 
 Having said all this, you can always mix and match Logic Apps and Azure Functions in the same solution so you can get the best of both worlds. <span style="background-color:transparent;">Hopefully this post has given you enough information to better choose the platform for your next cloud solution.</span>
 
+You can also watch a summary video of this comparison here: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/__CDv956fgE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Happy clouding!
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a><br/>
 <em>Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener noreferrer">@pacodelacruz</a></em></p>

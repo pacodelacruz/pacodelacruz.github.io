@@ -4,11 +4,9 @@ title: Implementing a WCF Client with Certificate-Based Mutual Authentication wi
 date: 2015-11-23 20:23
 author: Paco de la Cruz
 comments: true
-categories: [Azure WebJobs, Development, mTLS, WCF, WCF Client]
+category: Development
+tags: [Azure WebJobs, Development, mTLS, WCF, WCF Client]
 ---
-
-<p style="text-align:center;"><em>Cross-posted on <a href="https://blog.kloud.com.au/author/pacodelacruzag/">Kloud's blog</a>.
-Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener noreferrer">@pacodelacruz</a>.</em></p>
 
 Windows Communication Foundation (WCF) provides a relatively simple way to implement Certificate-Based Mutual Authentication on distributed clients and services. Additionally, it supports interoperability as it is based on WS-Security and X.509 certificate standards. This [blog post](http://blogs.msdn.com/b/bradleycotier/archive/2011/12/14/mutual-authentication-with-a-iis-hosted-wcf-data-service-installed-in-a-workgroup-environment.aspx) briefly summarises mutual authentication and covers the steps to implement it with an IIS hosted WCF service.
 

@@ -4,7 +4,8 @@ title: Better Documenting your BizTalk Solutions
 date: 2015-03-18 20:11
 author: Paco de la Cruz
 comments: true
-categories: [BizTalk, Documentation]
+category: BizTalk
+tags: [BizTalk, Documentation]
 ---
 
  The BizTalk Documenter has been available for many years on Codeplex for different BizTalk versions, starting with 2004 all the way to 2013 R2\. The Documenter for 2004, 2006, 2006 R2 and 2009 can be found [here](https://biztalkdocumenter.codeplex.com/). Some years later, a version for [BizTalk 2010](https://biztalk2010autodc.codeplex.com/) was created. Last year, [MBrimble](https://www.codeplex.com/site/users/view/mbrimble) and [Dijkgraaf](https://www.codeplex.com/site/users/view/Dijkgraaf) created a [newer version](https://biztalk2013documenter.codeplex.com/) which also supports BizTalk 2013 and 2013 R2\. They did a great job; all improvements and fixes are listed [here](https://connectedpawns.wordpress.com/2014/09/12/biztalk-documenter-2013/).
@@ -101,4 +102,7 @@ The option of customising the cover page has been available since past versions 
 Note that the template makes use of a stylesheet and images which are part of the documenter. You can use yours by adding them in the same **Resources** root folder. You can freely customise this html according to your preferences and needs. Make sure you name your ".htm" file as "**titlePage.htm**".
 
 I hope you find these tips useful and the BizTalk Documenter can help you to provide a comprehensive and quality documentation to your implemented BizTalk solutions. Please feel free to suggest to the team your ideas or improvements for the BizTalk Documenter on the [Codeplex page](https://biztalk2013documenter.codeplex.com/)
+
+<p style="text-align:center;"><em>Cross-posted on <a href="https://blog.kloud.com.au/author/pacodelacruzag/">Kloud's blog</a>.<br/>
+Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener noreferrer">@pacodelacruz</a>.</em></p>
 

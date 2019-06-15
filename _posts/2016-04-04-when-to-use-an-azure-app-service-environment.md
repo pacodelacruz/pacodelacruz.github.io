@@ -4,11 +4,9 @@ title: When to use an Azure App Service Environment?
 date: 2016-04-04 22:12
 author: Paco de la Cruz
 comments: true
-categories: [App Service Environment, Azure]
+category: Architecture
+tags: [App Service Environment, Azure]
 ---
-
-<p style="text-align:center;"><em>Cross-posted on <a href="https://blog.kloud.com.au/author/pacodelacruzag/">Kloud's blog</a>.
-Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener noreferrer">@pacodelacruz</a>.</em></p>
 
 Introduction
 ============

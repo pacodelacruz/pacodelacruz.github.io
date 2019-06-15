@@ -4,7 +4,8 @@ title: Interacting with Azure Web Apps Virtual File System using PowerShell and 
 date: 2016-08-30 22:12
 author: Paco de la Cruz
 comments: true
-categories: [App Service, Azure, Kudu API, PowerShell]
+category: Development
+tags: [App Service, Azure, Kudu API, PowerShell]
 ---
 
 ![](/assets/img/2016/08/083016_1331_interacting1.png)

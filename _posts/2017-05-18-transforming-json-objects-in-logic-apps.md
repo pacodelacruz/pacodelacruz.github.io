@@ -4,7 +4,8 @@ title: Transforming JSON Objects in Logic Apps
 date: 2017-05-18 21:22
 author: Paco de la Cruz
 comments: true
-categories: [Enterprise Integration Patterns, Logic Apps]
+category: Logic Apps
+tags: [Enterprise Integration Patterns, Logic Apps]
 ---
 <h2>Introduction</h2>
 Many integration scenarios require translating messages from one data model to another. This is described in the <a href="http://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageTranslator.html">Message Translator</a> Enterprise Integration Pattern. Some of these might be:

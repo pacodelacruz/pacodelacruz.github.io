@@ -4,7 +4,8 @@ title: Preparing Azure Logic Apps for CI/CD to Multiple Environments
 date: 2017-10-11 12:05
 author: Paco de la Cruz
 comments: true
-categories: [Azure, Azure iPaaS, CI/CD, Logic Apps]
+category: Logic Apps
+tags: [Azure, Azure iPaaS, DevOps, CI/CD, Logic Apps]
 ---
 <img class=" aligncenter" src="/assets/img/2017/10/101117_0432_preparingaz1.png" alt="" />
 <h2> Introduction</h2>

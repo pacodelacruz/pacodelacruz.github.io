@@ -4,7 +4,8 @@ title: Implementing the Correlation Identifier Pattern on Stateful Logic Apps us
 date: 2017-07-17 10:26
 author: Paco de la Cruz
 comments: true
-categories: [Azure, Azure iPaaS, Development, Enterprise Integration Patterns, Logic Apps, Serverless, Twilio, Webhook]
+category: Logic Apps
+tags: [Azure, Azure iPaaS, Development, Enterprise Integration Patterns, Logic Apps, Serverless, Twilio, Webhook]
 ---
 <p style="text-align:center;"><img class="aligncenter" src="https://www.mexia.com.au/wp-content/uploads/2017/07/071617_2338_Implementin1.jpg" alt="" /></p>
 

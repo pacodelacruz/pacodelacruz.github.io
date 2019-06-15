@@ -4,7 +4,8 @@ title: Implementing the Polling Consumer Pattern using Azure Logic Apps
 date: 2017-05-12 18:27
 author: Paco de la Cruz
 comments: true
-categories: [Azure Functions, Azure iPaaS, Enterprise Integration Patterns, Logic Apps, Microsoft iPaaS]
+category: Logic Apps
+tags: [Azure Functions, Azure iPaaS, Enterprise Integration Patterns, Logic Apps, Microsoft iPaaS]
 ---
 Introduction
 

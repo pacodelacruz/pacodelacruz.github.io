@@ -4,7 +4,8 @@ title: Azure Durable Functions Pattern Approval Workflow with SendGrid
 date: 2018-04-17 11:50
 author: Paco de la Cruz
 comments: true
-categories: [Azure Functions, Development, Durable Functions, SendGrid, Uncategorized]
+category: Durable Functions
+tags: [Azure Functions, Development, Durable Functions, SendGrid]
 ---
 <h2>Introduction</h2>
 <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-overview" target="_blank" rel="noopener noreferrer">Durable Functions</a> is a new (in preview at the time of writing) and very interesting extension of Azure Functions that allows you to build stateful and serverless code-based workflows. The Durable Functions extension abstracts all the state management, queueing, and checkpoint implementation commonly required for an orchestration engine. Thus, you just need to focus on your business logic without worrying much on the underlying complexities. Thanks to this extension, now you can:
@@ -16,7 +17,7 @@ categories: [Azure Functions, Development, Durable Functions, SendGrid, Uncatego
 	<li>Implement the correlation identifier pattern to enable human interaction processes, such as an approval workflow (<a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-overview#pattern-5-human-interaction" target="_blank" rel="noopener noreferrer">Human Interaction Pattern</a>) and;</li>
 	<li>Implement a flexible recurring process with lifetime management (<a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-overview#pattern-4-monitoring" target="_blank" rel="noopener noreferrer">Monitoring Pattern</a>).</li>
 </ol>
-It’s worth noting that Azure Durable Functions is not the only way to implement stateful workflows in a serverless manner on Azure. <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview" target="_blank" rel="noopener noreferrer">Azure Logic Apps</a> is another awesome platform, <a href="https://pacodelacruzag.wordpress.com/2018/02/02/microsoft-azure-ipaas-2/" target="_blank" rel="noopener noreferrer">core component of the Microsoft Azure iPaaS</a>, that allows you to build serverless and stateful workflows using a designer. In a previous post, <a href="https://pacodelacruzag.wordpress.com/2017/07/17/correlation-identifier-pattern-on-logic-apps/" target="_blank" rel="noopener noreferrer">I showed how to implement the approval workflow pattern on Logic Apps via SMS messages leveraging Twilio</a>.
+It’s worth noting that Azure Durable Functions is not the only way to implement stateful workflows in a serverless manner on Azure. <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-overview" target="_blank" rel="noopener noreferrer">Azure Logic Apps</a> is another awesome platform, <a href="/2018/02/02/microsoft-azure-ipaas-2/" target="_blank" rel="noopener noreferrer">core component of the Microsoft Azure iPaaS</a>, that allows you to build serverless and stateful workflows using a designer. In a previous post, <a href="/2017/07/17/correlation-identifier-pattern-on-logic-apps/" target="_blank" rel="noopener noreferrer">I showed how to implement the approval workflow pattern on Logic Apps via SMS messages leveraging Twilio</a>.
 
 In this post, I will show how to implement the <a href="https://docs.microsoft.com/en-us/azure/azure-functions/durable-functions-overview#pattern-5-human-interaction" target="_blank" rel="noopener noreferrer">Human Interaction Pattern</a> on Azure Durable Functions with SendGrid. You will see on the way that this implementation requires other Durable Functions patterns, such as, function chaining, fan-out and fan-in, and optionally the Async HTTP API Pattern.
 <h2>Scenario</h2>

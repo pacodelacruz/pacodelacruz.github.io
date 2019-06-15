@@ -4,7 +4,8 @@ title: Async Http APIs with Azure Durable Functions (and Polling Client)
 date: 2018-07-11 21:17
 author: Paco de la Cruz
 comments: true
-categories: [APIs, Azure, Azure Functions, Durable Functions]
+category: Durable Functions
+tags: [APIs, Azure, Azure Functions, Durable Functions]
 ---
 <img src="/assets/img/2018/07/070618_1006_asynchttpap1.png" alt="" />
 <h2>Introduction</h2>
@@ -14,7 +15,7 @@ Before we get into the details, it’s worth noting that this pattern can be use
 <h2>Scenario</h2>
 To demonstrate how to implement this pattern, I’ll use the scenario of “Call for Speakers” in a conference. In this, potential speakers submit a topic through an app, and they are very keen to know as soon as possible if they have been selected to present. Of course, in a real scenario there will be timelines and speakers would be notified before the agenda is published, so they wouldn’t need to keep continuously asking for the status of their submission. But I believe you get the idea that this is being used for illustration purposes only ;)
 <h2>Solution Overview</h2>
-The solution is based on Azure Durable Functions’ building blocks, including orchestration clients, the orchestration function, and activity functions. I’ve used dummy activity function, as the main purpose of this post is to demonstrate the capabilities to implement an Asynchronous Http API. In case you want to understand how to implement this further, you can have a look at my previous post on how to implement an <a href="https://pacodelacruzag.wordpress.com/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener">approval workflows on Durable Functions</a>.
+The solution is based on Azure Durable Functions’ building blocks, including orchestration clients, the orchestration function, and activity functions. I’ve used dummy activity function, as the main purpose of this post is to demonstrate the capabilities to implement an Asynchronous Http API. In case you want to understand how to implement this further, you can have a look at my previous post on how to implement an <a href="/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener">approval workflows on Durable Functions</a>.
 
 The diagram below shows the different components of the solution.
 
@@ -50,8 +51,8 @@ In this post, I’ve shown how to implement Asynchronous Http APIs using Durable
 
 If you are interested in more posts about patterns on Durable Functions, you can also check out:
 <ul>
-	<li><a href="https://pacodelacruzag.wordpress.com/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener">Azure Durable Functions Pattern: Approval Workflow with SendGrid</a></li>
-	<li><a href="https://pacodelacruzag.wordpress.com/2018/04/25/azure-durable-functions-approval-workflow-with-slack/" target="_blank" rel="noopener">Azure Durable Functions Pattern: Approval Workflow with Slack</a></li>
+	<li><a href="/2018/04/17/azure-durable-functions-approval-workflow-with-sendgrid/" target="_blank" rel="noopener">Azure Durable Functions Pattern: Approval Workflow with SendGrid</a></li>
+	<li><a href="/2018/04/25/azure-durable-functions-approval-workflow-with-slack/" target="_blank" rel="noopener">Azure Durable Functions Pattern: Approval Workflow with Slack</a></li>
 </ul>
 Happy clouding!
 <p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a>

@@ -4,7 +4,8 @@ title: Connecting to MS SQL Server with MuleSoft
 date: 2015-10-09 20:22
 author: Paco de la Cruz
 comments: true
-categories: [MuleSoft, SQL Server]
+category: MuleSoft
+tags: [MuleSoft, SQL Server]
 ---
 
 MuleSoft provides an [extensive list of connectors](https://www.mulesoft.com/exchange) which come in handy when implementing integration solutions. In many integration scenarios, we need to connect directly to a database to get or update data. MuleSoft provides a [database connector](https://docs.mulesoft.com/mule-user-guide/v/3.7/database-connector) which allows JDBC connectivity with relational databases to execute SQL operations such as Select, Insert, Update, Delete, and Stored Procedures.

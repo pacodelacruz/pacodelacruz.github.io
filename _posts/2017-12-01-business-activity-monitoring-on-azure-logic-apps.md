@@ -4,7 +4,8 @@ title: Business Activity Monitoring on Azure Logic Apps with Azure Log Analytics
 date: 2017-12-01 19:19
 author: Paco de la Cruz
 comments: true
-categories: [Azure, Azure iPaaS, Business Activity Monitoring, iPaaS, Logic Apps, Microsoft iPaaS, Monitoring]
+category: Logic Apps
+tags: [Azure, Azure iPaaS, Business Activity Monitoring, iPaaS, Logic Apps, Microsoft iPaaS, Monitoring]
 ---
 <h2>Introduction</h2>
 Azure Logic Apps provide <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-monitor-your-logic-apps-oms">built-in monitoring tools</a> that allow you to check the run history (including all inputs and outputs of triggers and actions), trigger history, status, performance, etc. Additionally, you can <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-monitor-your-logic-apps">enable diagnostic logging on your Logic Apps</a> and send all these runtime details and events to <a href="https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-overview">Azure Log Analytics</a>. You can also install the <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-monitor-your-logic-apps-oms">Logic Apps Management Solution</a> on OMS, which gives you a very rich aggregated view and charts of all your logic apps that are being monitored.

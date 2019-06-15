@@ -4,17 +4,18 @@ title: Publishing Custom Queries of Logic Apps Execution Logs
 date: 2017-12-07 21:34
 author: Paco de la Cruz
 comments: true
-categories: [Azure, Azure iPaaS, Azure Log Analytics, Logic Apps, Monitoring]
+category: Logic Apps
+tags: [Azure, Azure iPaaS, Azure Log Analytics, Logic Apps, Monitoring]
 ---
-In a previous post, I showed how to implement <a href="https://pacodelacruzag.wordpress.com/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">Business Activity Monitoring for Logic Apps</a>. However, sometimes developers, ops, or business users want to query execution logs to get information about the processing of business messages. Whether for troubleshooting or auditing, there are some questions these personas might have, like:
+In a previous post, I showed how to implement <a href="/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">Business Activity Monitoring for Logic Apps</a>. However, sometimes developers, ops, or business users want to query execution logs to get information about the processing of business messages. Whether for troubleshooting or auditing, there are some questions these personas might have, like:
 <ul>
 	<li>When was a business document processed?</li>
 	<li>What was the content of a received document?</li>
 	<li>How was that message processed?</li>
 </ul>
-As we saw in that <a href="https://pacodelacruzag.wordpress.com/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">post</a>, we can send diagnostic log information and custom tracked properties to Azure Log Analytics. We also saw how easy is to query those logs to get information about Logic Apps execution and messages processed. Now the question is, how can we publish those custom queries, so different users can make use of them? <span style="background-color:transparent;">In this post, I’ll show one easy way to do that.</span>
+As we saw in that <a href="/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">post</a>, we can send diagnostic log information and custom tracked properties to Azure Log Analytics. We also saw how easy is to query those logs to get information about Logic Apps execution and messages processed. Now the question is, how can we publish those custom queries, so different users can make use of them? <span style="background-color:transparent;">In this post, I’ll show one easy way to do that.</span>
 <h2>1. Tracking the relevant custom properties and sending data to Log Analytics.</h2>
-The first thing to do is to track the relevant custom properties we need for our queries as <strong>tracked properties</strong> in our Logic App workflow. Then you need to configure the Logic App workflow to send diagnostics information to Azure Log Analytics. You can follow the instructions on my <a href="https://pacodelacruzag.wordpress.com/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">previous post</a> to perform those steps.
+The first thing to do is to track the relevant custom properties we need for our queries as <strong>tracked properties</strong> in our Logic App workflow. Then you need to configure the Logic App workflow to send diagnostics information to Azure Log Analytics. You can follow the instructions on my <a href="/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">previous post</a> to perform those steps.
 <h2>2. Creating the queries to get the information our users need</h2>
 Once the information is being logged on Log Analytics, we need to create the queries to give the users the information they need. For that, first we need to open the Azure Log Analytics Portal. To open the portal we need to
 <ul>
@@ -26,7 +27,7 @@ And now you are ready to create your own queries.
 
 <img class="alignnone size-full wp-image-1117" src="/assets/img/2017/12/20-open-log-analytics.gif" alt="20 Open Log Analytics" width="2152" height="1152" />
 
-Based on the tracked properties of the Logic App workflow shown in my <a href="https://pacodelacruzag.wordpress.com/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">previous post</a>, I wrote this query to get all orders processed in the time range selected. This query returns, order number, total, date, channel, customer Id, the name of the Logic App workflow which processed this message, and the workflow run id. These last 2 columns would be quite handy for troubleshooting.
+Based on the tracked properties of the Logic App workflow shown in my <a href="/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">previous post</a>, I wrote this query to get all orders processed in the time range selected. This query returns, order number, total, date, channel, customer Id, the name of the Logic App workflow which processed this message, and the workflow run id. These last 2 columns would be quite handy for troubleshooting.
 
 <p/>
 <script src="https://gist.github.com/pacodelacruz/e8d0e9ae83ff39760e33bbe085b16900.js"></script>
@@ -43,7 +44,7 @@ Once we have the query ready, we can save it and export it, so later we can publ
 </ul>
 <img class="alignnone size-full wp-image-1118" src="/assets/img/2017/12/21-save-and-export-query.gif" alt="21 Save and Export Query" width="2184" height="1152" />
 <h2>4. Publishing the custom Azure Log Analytics query to the users</h2>
-After we have gotten the link to the query, we can publish it in the same Dashboard we created for our BAM charts described in my <a href="https://pacodelacruzag.wordpress.com/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">previous post</a>. We need to:
+After we have gotten the link to the query, we can publish it in the same Dashboard we created for our BAM charts described in my <a href="/2017/12/01/business-activity-monitoring-on-azure-logic-apps/">previous post</a>. We need to:
 <ul>
 	<li>Edit the shared Azure Dasboard</li>
 	<li>Add the Markdown tile.</li>

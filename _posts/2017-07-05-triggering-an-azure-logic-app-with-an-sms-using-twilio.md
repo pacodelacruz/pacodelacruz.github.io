@@ -4,7 +4,8 @@ title: Triggering an Azure Logic App by SMS messages with Twilio
 date: 2017-07-05 21:54
 author: Paco de la Cruz
 comments: true
-categories: [Logic Apps, SMS, Twilio]
+category: Logic Apps
+tags: [Logic Apps, Twilio]
 ---
 <h2>Introduction</h2>
 SMS messaging has been a widely adopted way of communication over the last decades, not only for people but for organisations as well. Even though nowadays there are many messaging apps that are more popular and flexible than plain SMS, there are still scenarios in which businesses find SMS messaging a valuable way to communicate with their customers, employees or business partners. For instance, there are food chains that allow you to place your favourite order via SMS, some business provide order and shipment tracking via SMS, and there are many confirmation systems that utilise SMS so users can confirm their attendance to a meeting or appointment via a text message.

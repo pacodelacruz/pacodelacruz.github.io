@@ -4,7 +4,8 @@ title: Presentation - Durable Functions - Serverless and Stateful Orchestrations
 date: 2018-06-14 12:15
 author: Paco de la Cruz
 comments: true
-categories: [Azure Functions, Conference, Durable Functions]
+category: Speaking
+tags: [Azure Functions, Speaking, Durable Functions]
 ---
 I had an awesome time presenting about Azure Durable Functions, showing how to build Serverless and Stateful Orchestration on Azure, at Azure Nights Melbourne.
 
@@ -14,6 +15,6 @@ Here is my slide deck
 
 And here is the recording of the session
 
-<iframe width="560" height="315" src="https://youtu.be/BgHJR2diCw8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BgHJR2diCw8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Happy Clouding!

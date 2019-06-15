@@ -4,7 +4,8 @@ title: Microsoft Azure Integration Platform as a Service (iPaaS) – Logic Apps,
 date: 2017-02-10 23:44
 author: Paco de la Cruz
 comments: true
-categories: [API Management, Azure, Azure Functions, Azure iPaaS, Logic Apps, Microsoft iPaaS, Service Bus]
+category: Azure iPaaS
+tags: [API Management, Azure, Azure Functions, Azure iPaaS, Logic Apps, Microsoft iPaaS, Service Bus]
 ---
 
 <h1>Introduction</h1>
