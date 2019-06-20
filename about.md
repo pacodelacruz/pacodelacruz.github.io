@@ -4,16 +4,12 @@ title: About
 permalink: /about/
 ---
 
-<img class="  wp-image-1151 alignleft" src="/assets/img/2018/06/paco-head-shot-mvp.jpg" alt="Corporate Headshot" width="318" height="421" />
+<img src="/assets/img/2018/06/paco-head-shot-mvp.jpg" alt="Corporate Headshot" width="318" height="421" style="float: left; padding: 0px 15px 0px 0px;"/>
 
-Hi there! Thanks for stopping by. This is Paco, I am software developer and architect recognised as Microsoft Azure MVP. I started my professional career back in 2001; and since then, I have been working as a consultant. This has allowed me to work for multiple organisations in many different industries and to learn from many different environments.
+Hi there! Thanks for visiting my blog. This is Paco, I am software developer and architect awarded as <a href="https://mvp.microsoft.com/en-us/PublicProfile/5003116?fullName=Paco%20de%20la%20Cruz" rel="noopener noreferrer" target="_blank">Microsoft Azure MVP</a>. I started my professional career back in 2001; and since then, I have been working as a consultant. This has allowed me to work for multiple organisations in many different industries and to learn from many different challenges, environments, and business scenarios.
 
-As part of my journey <span style="text-decoration:underline;"><strong>trying</strong> </span>to make my tiny little "dent in the universe",  I have been blogging and speaking, <span style="text-decoration:underline;"><strong>hoping</strong></span> to promote <em>healthier</em> coding practices and more <em>balanced</em> cloud implementations ;)
+As part of my journey <em>trying</em> to make my tiny little "dent in the universe",  I have been blogging and speaking, hoping to promote <em>healthier</em> coding practices and more <em>balanced</em> cloud implementations ;)
 
-I am also certified as <em><a href="https://www.youracclaim.com/badges/30aff762-2e03-4090-81fc-dc705ea34109">MCSE: Cloud Platform and Infrastructure</a></em> and currently working as a consultant architecting, building and implementing Enterprise Cloud Applications and Integration Solutions based on Microsoft Azure.
+I am also certified as <em><a href="https://www.youracclaim.com/badges/30aff762-2e03-4090-81fc-dc705ea34109" rel="noopener noreferrer" target="_blank">MCSE: Cloud Platform and Infrastructure</a></em> and currently working as a consultant architecting, building and implementing Enterprise Cloud Applications and Integration Solutions based on Microsoft Azure.
 
-If you are interested in the topics you read here or have have any feedback or questions, I'd love to connect at:
-
-<a href="https://twitter.com/pacodelacruz"><img class="alignnone  wp-image-437" src="/assets/img/2015/03/twitter60.png" alt="twitter60" width="50" height="50" /></a> <a href="https://www.linkedin.com/in/pacodelacruz/"><img class="alignnone  wp-image-438" src="/assets/img/2015/03/linkedin80.png" alt="linkedin80" width="50" height="50" /></a>
-
-
+If you are interested in the topics you read here or have have any feedback or questions, feel free to connect. My details are at the bottom of this page.

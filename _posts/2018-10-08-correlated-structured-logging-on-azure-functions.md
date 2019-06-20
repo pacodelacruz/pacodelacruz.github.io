@@ -111,5 +111,7 @@ You can save and publish your Application Insights custom queries for yourself o
 In this post, we saw how easy is to implement structured logging in Azure Functions using out-of-the-box capabilities with Application Insights. We also saw how to query and analyse our structure logging in Application Insights using its Query Language. I hope you have found this post handy. Please feel free to leave your feedback or questions below
 
 Happy Logging!
-<p style="text-align:center;"><em>Cross-posted on <a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz">Deloitte Platform Engineering blog</a>.<br/>
-Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener noreferrer">@pacodelacruz</a>.</em></p>
+<p style="text-align:center;"><em>Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener noreferrer">@pacodelacruz</a><br/>
+Cross-posted on <a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz" target="_blank" rel="noopener noreferrer">Deloitte Platform Engineering</a>
+</em></p>
+
