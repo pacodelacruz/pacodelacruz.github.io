@@ -14,7 +14,7 @@ All these tools are great for developers or system administrators, who want to m
 
 In this post, I will show how to implement tracking capabilities for business-related information and how to create a <a href="https://en.wikipedia.org/wiki/Business_activity_monitoring">Business Activity Monitoring</a> (BAM) dashboard for Logic Apps.
 <h2>Scenario</h2>
-In a <a href="https://platform.deloitte.com.au/articles/correlation-identifier-pattern-on-logic-apps">previous post</a>, I introduced a fictitious company called "Farm to Table", which provides fresh produce drone delivery. This company has been leveraging Logic Apps to implement their business processes, which integrate with multiple systems on the cloud. As part of their requirements they need to monitor the business activity flowing through this integration solution.
+In a <a href="/2017/07/17/correlation-identifier-pattern-on-logic-apps">previous post</a>, I introduced a fictitious company called "Farm to Table", which provides fresh produce drone delivery. This company has been leveraging Logic Apps to implement their business processes, which integrate with multiple systems on the cloud. As part of their requirements they need to monitor the business activity flowing through this integration solution.
 
 "Farm to Table" want to be able to monitor the orders they are receiving per channel. At the moment, customers can place orders via SMS, a web online store, and a mobile app. They also want to be able to track orders placed using customer number and order number.
 <h2>Solution</h2>

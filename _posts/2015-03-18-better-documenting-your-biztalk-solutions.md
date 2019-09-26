@@ -103,6 +103,6 @@ Note that the template makes use of a stylesheet and images which are part of th
 
 I hope you find these tips useful and the BizTalk Documenter can help you to provide a comprehensive and quality documentation to your implemented BizTalk solutions. Please feel free to suggest to the team your ideas or improvements for the BizTalk Documenter on the [Codeplex page](https://biztalk2013documenter.codeplex.com/)
 
-<p style="text-align:center;"><em>Cross-posted on <a href="https://blog.kloud.com.au/author/pacodelacruzag/">Kloud's blog</a>.<br/>
+<p style="text-align:center;"><em>Cross-posted on <a href="https://blog.kloud.com.au/author/pacodelacruzag/" rel="noopener" target="_blank">Kloud's blog</a>.<br/>
 Follow me on <a href="https://twitter.com/pacodelacruz" target="_blank" rel="noopener noreferrer">@pacodelacruz</a>.</em></p>
 
