@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Your Own Serverless Request Bin with Azure Functions (Part 1)
+title: Your Own Serverless Request Bin with Azure Functions
 date: 2019-09-26 10:00
 author: Paco de la Cruz
 comments: true
@@ -10,6 +10,11 @@ tags: [Azure Functions, Serverless, Dependency Injection]
 
 <base target="_blank"/>
 
+<p>This post is part of a series</p>
+<ol>
+<li>Your Own Serverless Request Bin with Azure Functions (this)</li>
+<li><a href="/2019/10/22/serverless-request-bin-azure-durable-functions" rel="noopener" target="_blank"><span>Your Own Serverless Request Bin with Azure Durable Functions</span></a></li>
+</ol>
 <p>If you have developed or consumed HTTP APIs or webhooks, chances are that you have had the need of troubleshooting and inspecting HTTP requests. In the past, there was a very popular and handy free site called <em>Request Bin</em> (<u>requestb.in)</u> that allowed you to capture your HTTP requests and inspect their content, including the body, headers, and query params, etc. Unfortunately, due to ongoing abuse, the publicly hosted version of Request Bin was discontinued. After that, other sites started offering hosted alternatives to Request Bin. You also have the possibility of self-hosting and running your own Request Bin <a href="https://github.com/Runscope/requestbin" target="_blank" rel="noopener">in a container</a>.</p>
 <p>One concern I have always had when using this type of free public site to inspect my HTTP requests is that I do not know how they handle my information. More often than not, I need to inspect requests that contain credentials, JWTs with access to sensitive resources and payloads with sensitive information. I cannot be sure that the provider is not logging those requests. Furthermore, it is not possible to guarantee that other external users will not get or guess my request bin identifier, which would give them full access to my HTTP request history.</p>
 <p>Most of my development these days happens on Azure. Thus, the easiest option to solve this problem would be to host my own <a href="https://github.com/Runscope/requestbin" target="_blank" rel="noopener">Request Bin</a> on <a href="https://azure.microsoft.com/en-au/services/container-instances/" target="_blank" rel="noopener">Azure Container Instances</a>. However, this is not very cost-effective, as I would need to pay for the container instance even if it is idle for long periods, or dealing with the overhead of deleting it every time I finish inspecting HTTP request and redeploying when needed again. Being a developer, I started wondering how hard it could be to build my own Request Bin and host it on Azure Functions so that I would not need to pay when it was idle.</p>
