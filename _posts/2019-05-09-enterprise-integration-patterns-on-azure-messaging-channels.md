@@ -7,37 +7,44 @@ comments: true
 category: Architecture
 tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Event Grid, Azure Functions]
 ---
-<base target="_blank"/>
-
-![Channel 3](/assets/img/2019/05/Channel3.jpeg)
-
-In the [previous post](/2019/04/10/enterprise-integration-patterns-on-azure-message-construction) of the series, I covered how application data are to be serialised and packaged into messages so they can be transmitted between applications. In this post, I'll describe the [**Messaging Channels**](https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageChannel.html) patterns, which focus on solving the challenges of transmitting messages from a sender application to the intended receiver applications; and how these patterns can be implemented on the Azure Integration Services. Those marked with an asterisk (*) are those which are not described [in the original book](https://www.enterpriseintegrationpatterns.com/books1.html), but I suggest to consider.
-
-**Messaging Channels** can be defined statically or dynamically. Depending on different factors, different types of channels can be used. The different channels are described in the following sections. 
-
-This is a part of a series describing how to implement the Enterprise Integration Patterns using the Azure Integration Services:
-
-- [Introduction](/2019/03/08/enterprise-integration-patterns-on-azure-intro)
-- [Message Construction](/2019/04/10/enterprise-integration-patterns-on-azure-message-construction)
-- Messaging Channels (this)
-- [Messaging Endpoints](/2019/06/05/enterprise-integration-patterns-on-azure-endpoints)
-- Message Routing
-- Message Transformation
-- Platform Management
-
-The remaining posts will be published in the following weeks/months.
-
-Point-to-Point Channel
-----------------------
-
-The [**Point-to-Point Channel**](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PointToPointChannel.html) is utilised when the sender is aware of the one receiver that is meant to receive and process the message. It's common that **Command Messages** or **Query Messages**, which are tightly coupled to the receiver system require a **Point-to-Point Channel**.
-
-**Implementation**:
+<p><img src="/assets/img/2019/04/Channel%203.jpeg" alt="Channel 3" width="1920" style="width: 1920px;"></p>
+<p>In the <u><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">previous post</a> </u>of the series, I covered how application data are to be serialised and packaged into messages so they can be transmitted between applications. In this post, I’ll describe the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageChannel.html" rel="noopener" target="_blank"><strong>Messaging Channels</strong></a> patterns, which focus on solving the challenges of transmitting messages from a sender application to the intended receiver applications; and how these patterns can be implemented on the Azure Integration Services.&nbsp;<span>Those marked with an asterisk (*) are those which are not described&nbsp;</span><a href="https://www.enterpriseintegrationpatterns.com/books1.html" rel="noopener" target="_blank">in the original book</a><span>, but I suggest to consider.</span></p>
+<!--more-->
+<p><strong>Messaging Channels</strong> can be defined statically or dynamically. Depending on different factors, different types of channels can be used. The different channels are described in the following sections.&nbsp;</p>
+<p>This is a part of a series describing how to implement the Enterprise Integration Patterns using the Azure Integration Services:</p>
+<ol>
+<li><a href="/2019/03/08/enterprise-integration-patterns-on-azure-intro" rel=" noopener">Introduction</a></li>
+<li><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction">Message Construction</a></li>
+<li>Messaging Channels (this)</li>
+<li><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
+<li><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank">Message Routing</a></li>
+<li><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation" rel="noopener">Message Transformation</a></li>
+<li><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
+</ol>
+<p>The remaining posts will be published in the following weeks/months.</p>
+<p>The patterns covered in this article are listed below.&nbsp;</p>
+<ul>
+<li><a href="#point-to-point-channel" rel=" noopener">Point-to-Point Channel</a></li>
+<li><a href="#publish-subscribe-channel" rel=" noopener">Publish-Subscribe Channel</a></li>
+<li><a href="#push-pull-channel" rel=" noopener">Push-Pull Channel (*)</a></li>
+<li><a href="#push-push-channel" rel=" noopener">Push-Push Channel (*)</a></li>
+<li><a href="#data-type-channel" rel=" noopener">Datatype Channel</a></li>
+<li><a href="#invalid-message-channel" rel=" noopener">Invalid Message Channel</a></li>
+<li><a href="#dead-letter-channel" rel=" noopener">Dead Letter Channel</a></li>
+<li><a href="#guaranteed-delivery" rel=" noopener">Guaranteed Delivery</a></li>
+<li><a href="#circuit-breaker" rel=" noopener">Circuit Breaker (*)</a></li>
+<li><a href="#channel-adapter" rel=" noopener">Channel Adapter</a></li>
+<li><a href="#messaging-bridge" rel=" noopener">Messaging Bridge</a></li>
+<li><a href="#message-bus" rel=" noopener">Message Bus</a></li>
+</ul>
+<h2 id="point-to-point-channel">Point-to-Point Channel</h2>
+<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/PointToPointChannel.html" rel="noopener" target="_blank"><strong>Point-to-Point Channel</strong></a> is utilised when the sender is aware of the one receiver that is meant to receive and process the message. It’s common that <strong>Command Messages</strong> or <strong>Query Messages</strong>, which are tightly coupled to the receiver system require a <strong>Point-to-Point Channel</strong>.</p>
+<p><strong>Implementation</strong>:</p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/05/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="633">
 <p>A <strong>Point-to-Point</strong> channel can be implemented using <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#queues" rel="noopener" target="_blank">Azure Service Bus Queues</a>. A Queue is meant to have only one consumer. Thus it’s common that the sender application that drops the message into the queue is aware of the receiver.</p>
@@ -45,19 +52,14 @@ The [**Point-to-Point Channel**](https://www.enterpriseintegrationpatterns.com/p
 </tr>
 </tbody>
 </table>
-
-Publish-Subscribe Channel
--------------------------
-
-While the **Point-to-Point Channel** can be used to send messages to only one consumer, the [**Publish-Subscribe Channel**](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html) allows to send one message to all available interested receivers (subscribers). In this pattern, the sender does not need to be aware of who is subscribing to the messages in the channel or if there are any active subscribers. The **Publish-Subscribe Channel** abstracts that from the sender. However, the channel must be aware of the subscribers, so that it can create a copy of every message for each of the active subscribers.
-
- **Implementation**
-
+<h2 id="publish-subscribe-channel">Publish-Subscribe Channel</h2>
+<p>While the <strong>Point-to-Point Channel</strong> can be used to send messages to only one consumer, the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html" rel="noopener" target="_blank"><strong>Publish-Subscribe Channel</strong></a> allows to send one message to all available interested receivers (subscribers). In this pattern, the sender does not need to be aware of who is subscribing to the messages in the channel or if there are any active subscribers. The <strong>Publish-Subscribe Channel</strong> abstracts that from the sender. However, the channel must be aware of the subscribers, so that it can create a copy of every message for each of the active subscribers.</p>
+<p>&nbsp;<strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="633">
 <p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions" rel="noopener" target="_blank">Azure Service Bus Topics and Subscriptions</a> can be used as a Publish-Subscribe Channel to transmit <strong>Document Messages</strong>. The sender drops the message into the topic, and a subscription is created for each subscriber.</p>
@@ -65,7 +67,7 @@ While the **Point-to-Point Channel** can be used to send messages to only one co
 </tr>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81" style="width: 81px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81" style="width: 81px;"></strong></p>
 </td>
 <td width="633">
 <p>For <strong>Event Messages</strong>, <a href="https://docs.microsoft.com/en-us/azure/event-grid/concepts#topics" rel="noopener" target="_blank">Azure Event Grid topics</a> can be used. Similarly, a subscription is created for each interested receiver.</p>
@@ -73,17 +75,13 @@ While the **Point-to-Point Channel** can be used to send messages to only one co
 </tr>
 </tbody>
 </table>
-
-Push-Pull Channel (*)
----------------------
-
-A **Push-Pull Channel (*)** is a messaging channel which cannot push messages to the intended receiver applications. Thus, it is up to the receiver application to pull the messages from the channel. This type of channel fits well with the **Polling Consumer**. This pattern is not originally described in the book, but I believe it is important to be aware of this type of channels when designing message-based enterprise integration solutions.
-
+<h2 id="push-pull-channel">Push-Pull Channel (*)</h2>
+<p>A <strong>Push-Pull Channel (*)</strong> is a messaging channel which cannot push messages to the intended receiver applications. Thus, it is up to the receiver application to pull the messages from the channel. This type of channel fits well with the <strong>Polling Consumer</strong>. This pattern is not originally described in the book, but I believe it is important to be aware of this type of channels when designing message-based enterprise integration solutions.</p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="633">
 <p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions" rel="noopener" target="_blank">Azure Service Bus Queues and Topics</a> require the receiver applications to pull messages from them.</p>
@@ -91,18 +89,13 @@ A **Push-Pull Channel (*)** is a messaging channel which cannot push messages to
 </tr>
 </tbody>
 </table>
-
-
-Push-Push Channel (*)
----------------------
-
-A **Push-Push Channel (*)** is a messaging channel which is able to push messages to the intended receiver applications. Thus, the receiver application must be able to receive the messages and be available. This **Messaging Channel** pattern fits well with the **Event-Driven Consumer**. Additionally, **Push-Push Channels** are ideal for **Event Messages**. This pattern is not originally described in the book, but I believe it is important to be aware of it when designing message-based enterprise integration solutions.
-
+<h2 id="push-push-channel">Push-Push Channel (*)</h2>
+<p>A <strong>Push-Push Channel (*)</strong> is a messaging channel which is able to push messages to the intended receiver applications. Thus, the receiver application must be able to receive the messages and be available. This <strong>Messaging Channel</strong> pattern fits well with the <strong>Event-Driven Consumer</strong>. Additionally, <strong>Push-Push Channels</strong> are ideal for <strong>Event Messages</strong>. This pattern is not originally described in the book, but I believe it is important to be aware of it when designing message-based enterprise integration solutions.</p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81" style="width: 81px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81" style="width: 81px;"></strong></p>
 </td>
 <td width="633">
 <p><a href="https://azure.microsoft.com/en-au/services/event-grid/" rel="noopener" target="_blank">Azure Event Grid</a> is a <strong>Push-Push Channel</strong> ideal for <strong>Event Messages</strong>. Given that Event Grid pushes the messages to the intended receiver application, the application must be available. To support transient failures and solution resiliency, Event Grid offers configurable retries and dead-lettering.</p>
@@ -110,19 +103,14 @@ A **Push-Push Channel (*)** is a messaging channel which is able to push message
 </tr>
 </tbody>
 </table>
-
-Datatype Channel
-----------------
-
-The [**Datatype Channel**](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DatatypeChannel.html) suggests that, while designing and implementing our channels, we should aim to have one channel per Message Type. So that the receiver knows how to process the message without complex rules.
-
-**Implementation**
-
+<h2 id="data-type-channel">Datatype Channel</h2>
+<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/DatatypeChannel.html" rel="noopener" target="_blank"><strong>Datatype Channel</strong></a> suggests that, while designing and implementing our channels, we should aim to have one channel per Message Type. So that the receiver knows how to process the message without complex rules.</p>
+<p><strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"><br></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"><br></strong></p>
 </td>
 <td width="633">
 <p>On Service Bus, it is a good practice to use separate queues or topics for different message types (datatypes).</p>
@@ -130,7 +118,7 @@ The [**Datatype Channel**](https://www.enterpriseintegrationpatterns.com/pattern
 </tr>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81"></strong></p>
 </td>
 <td width="633">
 <p>On Event Grid, it is recommended to have different topics for different event types (data types).</p>
@@ -138,19 +126,14 @@ The [**Datatype Channel**](https://www.enterpriseintegrationpatterns.com/pattern
 </tr>
 </tbody>
 </table>
-
-Invalid Message Channel
------------------------
-
-When implementing messaging systems, we shouldn't expect messages to be valid all the time. There can be many different reasons why a message in a **Messaging Channel** is not valid; from missing required values, to invalid values, to an invalid message structure, to invalid message types. In all these cases, there is no point on retrying the processing of the message, as it will keep failing the validations. The [**Invalid Message Channel**](https://www.enterpriseintegrationpatterns.com/patterns/messaging/InvalidMessageChannel.html) is a channel to which a messaging channel or the receiver application can deliver those invalid messages in a graceful manner without losing them.  
-
-**Implementation**
-
+<h2 id="invalid-message-channel">Invalid Message Channel</h2>
+<p>When implementing messaging systems, we shouldn’t expect messages to be valid all the time. There can be many different reasons why a message in a <strong>Messaging Channel</strong> is not valid; from missing required values, to invalid values, to an invalid message structure, to invalid message types. In all these cases, there is no point on retrying the processing of the message, as it will keep failing the validations. The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/InvalidMessageChannel.html" rel="noopener" target="_blank"><strong>Invalid Message Channel</strong></a> is a channel to which a messaging channel or the receiver application can deliver those invalid messages in a graceful manner without losing them. &nbsp;</p>
+<p><strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="633">
 <p>In Service Bus, there is a <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues" rel="noopener" target="_blank">Dead-Letter sub-queue</a> under queues or subscriptions, but not a separate Invalid Message sub-queue. However, we can make use of the <em><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues" rel="noopener" target="_blank">DeadLetterReason</a></em> and <em><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues" rel="noopener" target="_blank">DeadLetterErrorDescription</a></em> fields to specify the cause of sending the message to the sub-queue. Given that Service Bus does not provide <strong>Message Validation (*), </strong>this must occur on the receiver application, and that application would be responsible to move the message to the corresponding sub-queue while specifying the reason.</p>
@@ -158,7 +141,7 @@ When implementing messaging systems, we shouldn't expect messages to be valid al
 </tr>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81"></strong></p>
 </td>
 <td width="633">
 <p>When Event-Grid tries to deliver an event and receives an Http 400 (Bad Request) or an Http 413 (Request Entity Too Large) response code from the receiver, it <a href="https://docs.microsoft.com/en-us/azure/event-grid/delivery-and-retry#dead-letter-events" rel="noopener" target="_blank">immediately sends the event to the dead-letter endpoint</a>. The <strong>Message Validation (*)</strong> must occur on the receiver application, and that application must return the corresponding Http status code to Event Grid. At the time of writing, Event Grid only supports to write invalid messages to a blob, which cannot be considered a proper messaging channel. So it is up to the solution or the administrator to pull those events to resolve deliveries.</p>
@@ -166,19 +149,14 @@ When implementing messaging systems, we shouldn't expect messages to be valid al
 </tr>
 </tbody>
 </table>
-
-Dead Letter Channel
--------------------
-
-In the previous pattern, we described how to handle messages that cannot be processed when the message is invalid. But, what if the message is valid but cannot be delivered at all to the intended receiver? This could happen for various reasons, from the receiver being unavailable, to a communication failure to the receiver, to not being able to identify the receiver, to a message being expired. When the channel cannot deliver the message, there should be a graceful way to remove the message from the queue or topic subscription and leave it somewhere else for a different type of processing or troubleshooting. This is the purpose of a [**Dead Letter Channel**](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html).
-
-**Implementation**
-
+<h2 id="dead-letter-channel">Dead Letter Channel</h2>
+<p>In the previous pattern, we described how to handle messages that cannot be processed when the message is invalid. But, what if the message is valid but cannot be delivered at all to the intended receiver? This could happen for various reasons, from the receiver being unavailable, to a communication failure to the receiver, to not being able to identify the receiver, to a message being expired. When the channel cannot deliver the message, there should be a graceful way to remove the message from the queue or topic subscription and leave it somewhere else for a different type of processing or troubleshooting. This is the purpose of a <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html" rel="noopener" target="_blank"><strong>Dead Letter Channel</strong></a>.</p>
+<p><strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="633">
 <p>As mentioned above, Azure Service Bus provides a dead letter sub-queue and sub-subscriptions so messages that cannot be delivered can be moved there. Messages can also be moved to the dead letter if their <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues#exceeding-timetolive" rel="noopener" target="_blank"><em>TimeToLive</em> has exceeded</a> or when <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues#exceeding-maxdeliverycount" rel="noopener" target="_blank">all retries (<em>MaxDeliveryCount</em>) have been exhausted</a>.</p>
@@ -186,7 +164,7 @@ In the previous pattern, we described how to handle messages that cannot be proc
 </tr>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81"></strong></p>
 </td>
 <td width="633">
 <p>Event Grid supports holding events that can’t be delivered to the receiver application to a <a href="https://docs.microsoft.com/en-us/azure/event-grid/manage-event-delivery#set-dead-letter-location" rel="noopener" target="_blank">dead letter location</a>. At the time of writing, Event Grid only supports to write invalid messages to a blob, which cannot be considered a messaging channel. So it is up to the solution or the administrator to pull those events to resolve deliveries.</p>
@@ -194,19 +172,14 @@ In the previous pattern, we described how to handle messages that cannot be proc
 </tr>
 </tbody>
 </table>
-
-Guaranteed Delivery
--------------------
-
-Asynchronous messaging allows decoupling in time the sender from the receivers. When the receiver is not available or reachable through the network, the messaging system can store the message and retry delivering the message until the receiver is reachable or available. To do so, the messaging channel must not only have the message in memory but persist it on disk so the message can survive a crash in the channel. This behaviour is described by the **[Guaranteed Delivery](https://www.enterpriseintegrationpatterns.com/patterns/messaging/GuaranteedMessaging.html)** pattern.
-
-**Implementation**
-
+<h2 id="guaranteed-delivery">Guaranteed Delivery</h2>
+<p>Asynchronous messaging allows decoupling in time the sender from the receivers. When the receiver is not available or reachable through the network, the messaging system can store the message and retry delivering the message until the receiver is reachable or available. To do so, the messaging channel must not only have the message in memory but persist it on disk so the message can survive a crash in the channel. This behaviour is described by the <strong><a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/GuaranteedMessaging.html" rel="noopener" target="_blank">Guaranteed Delivery</a></strong> pattern.</p>
+<p><strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81"></strong></p>
 </td>
 <td width="633">
 <p>Event Grid <a href="https://docs.microsoft.com/en-us/azure/event-grid/delivery-and-retry#retry-schedule-and-duration">supports retries</a> to delivery events to the receiver applications. It implements exponential back off policy to avoid overwhelming unhealthy endpoints or minimise traffic when the endpoint is down for a long period. However, at the time of writing, it only retries up to 24 hours.</p>
@@ -214,8 +187,8 @@ Asynchronous messaging allows decoupling in time the sender from the receivers. 
 </tr>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/05/Logic Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"></strong></p>
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="633">
 <p>Logic Apps and Service Bus can be used together to implement advanced options for guaranteed delivery. A Logic App workflow can be in charge of delivering the message, while Service Bus can persist the message until it is successfully delivered.</p>
@@ -231,7 +204,7 @@ Asynchronous messaging allows decoupling in time the sender from the receivers. 
 </tr>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Azure Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"><br></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"><br></strong></p>
 </td>
 <td width="633">
 <p>A similar implementation to the one described above could be done using <strong>Azure Functions</strong>. An advantage that Azure Functions offers when using the Service Bus Trigger binding, is that the message lock can be renewed while the Function is being executed and the message is not completed.</p>
@@ -239,21 +212,16 @@ Asynchronous messaging allows decoupling in time the sender from the receivers. 
 </tr>
 </tbody>
 </table>
-
-Circuit Breaker (*)
--------------------
-
-The **[Circuit Breaker](https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker)** pattern is not described in the Enterprise Integration Patterns Book, but made popular by Michael Nygard in his book [Release It!](https://pragprog.com/book/mnee/release-it) This pattern can prevent overwhelming downstream systems with messages that are likely to fail due to the unavailability or unhealthy status of the downstream system. By implementing this pattern, the solution should be able to detect failures on the receiver application and stop sending messages when they are unlikely to be processed successfully. At the same time, the solution should detect when the fault has been resolved so that it can resume sending the queued messages.
-
-**Implementation**
-
+<h2 id="circuit-breaker">Circuit Breaker (*)</h2>
+<p>The <strong><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker" rel="noopener" target="_blank">Circuit Breaker</a></strong> pattern is not described in the Enterprise Integration Patterns Book, but made popular by Michael Nygard in his book <a href="https://pragprog.com/book/mnee/release-it" rel="noopener" target="_blank">Release It!</a> This pattern can prevent overwhelming downstream systems with messages that are likely to fail due to the unavailability or unhealthy status of the downstream system. By implementing this pattern, the solution should be able to detect failures on the receiver&nbsp;application&nbsp;and stop sending messages when they are unlikely to be processed successfully. At the same time, the solution should detect when the fault has been resolved so that it can resume sending the queued messages.</p>
+<p><strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Azure Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></strong></p>
-<p><strong><img src="/assets/img/2019/05/Logic Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80"></strong></p>
 </td>
 <td width="633">
 <p>This pattern is not a built-in capability of any of the Azure Integration Services. However, <a href="https://twitter.com/jeffhollan">Jeff Hollan</a>, Program Manager of the Azure Functions team, has <a href="https://hackernoon.com/reliable-event-processing-in-azure-functions-37054dc2d0fc">described a way to implement this pattern</a> using Logic Apps and Azure Functions. The solution&nbsp;described in his post relies on Redis cache as a shared state across all instances (<strong>Competing Consumers</strong>) processing the messages, and a Logic App as a <strong>Process Manager</strong> that can manage the state of the circuit (open or closed).</p>
@@ -263,20 +231,13 @@ The **[Circuit Breaker](https://docs.microsoft.com/en-us/azure/architecture/patt
 </tr>
 </tbody>
 </table>
-
-
-Channel Adapter
----------------
-
-A [**Channel Adapter**](https://www.enterpriseintegrationpatterns.com/patterns/messaging/ChannelAdapter.html) is a simplified interface to the **Messaging Channel** that can be used by sender or receiver applications to connect to the messaging system.
-
-**Implementation**
-
+<h2 id="channel-adapter">Channel Adapter</h2>
+<p>A <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/ChannelAdapter.html" rel="noopener" target="_blank"><strong>Channel Adapter</strong></a> is a simplified interface to the <strong>Messaging Channel</strong> that can be used by sender or receiver applications to connect to the messaging system.</p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/05/Logic Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
 <p>&nbsp;</p>
 </td>
 <td width="633">
@@ -284,33 +245,28 @@ A [**Channel Adapter**](https://www.enterpriseintegrationpatterns.com/patterns/m
 </td>
 </tr>
 <tr>
-<td width="74"><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80"></td>
+<td width="74"><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80"></td>
 <td width="633">
 <p>Service Bus provides different client libraries for different programming languages, like <a href="https://docs.microsoft.com/en-us/dotnet/api/overview/azure/service-bus?view=azure-dotnet">.NET</a>, <a href="https://github.com/Azure/azure-service-bus-java">Java</a>, <a href="https://github.com/Azure/azure-sdk-for-js/tree/master/sdk/servicebus/service-bus/">Javascript</a>, <a href="https://github.com/Azure/azure-service-bus-go">Go</a>, and <a href="https://docs.microsoft.com/en-us/python/api/overview/azure/servicebus?view=azure-python">Python</a>. These can be used when we can modify the applications participating in our solution using any of these programming languages.&nbsp;</p>
 <p>Service Bus also provides <a href="https://community.dynamics.com/365/b/ajitpatra365crm/archive/2018/09/26/azure-service-bus-queue-integration-with-d365-part-1">integration with D365</a></p>
 </td>
 </tr>
 <tr>
-<td width="74"><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81"></td>
+<td width="74"><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81"></td>
 <td width="633">
 <p>Event Grid also provides different client libraries, like <a href="https://docs.microsoft.com/en-us/azure/event-grid/sdk-overview#data-plane-sdks">.NET, Go, Java, Node, Python and Ruby</a>.</p>
 </td>
 </tr>
 </tbody>
 </table>
-
-Messaging Bridge
-----------------
-
-In some scenarios, enterprises use more than one messaging system in the same solution. A **[Messaging Bridge](https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingBridge.html)** can connect different messages channels reliably to move the messages from one channel to the other.
-
-**Implementation**
-
+<h2 id="messaging-bridge">Messaging Bridge</h2>
+<p>In some scenarios, enterprises use more than one messaging system in the same solution. A <strong><a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessagingBridge.html" rel=" noopener">Messaging Bridge</a></strong> can connect different messages channels reliably to move the messages from one channel to the other.</p>
+<p><strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/05/Logic Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
 </td>
 <td width="633">
 <p>Some companies use Azure Service Bus as a <strong>Messaging Channel</strong> on Azure and <a href="https://www.ibm.com/au-en/products/mq" rel="noopener" target="_blank">IBM MQ</a> on premises. Logic Apps provide a connector for both IBM MQ and Service Bus. You can use a Logic Apps and these two connectors to create a messaging bridge and connect both messaging channels.</p>
@@ -319,7 +275,7 @@ In some scenarios, enterprises use more than one messaging system in the same so
 </tr>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81"></strong></p>
 </td>
 <td width="633">
 <p>For Event Messages, you can implement events with the <a href="https://docs.microsoft.com/en-us/azure/event-grid/cloudevents-schema" rel="noopener" target="_blank">CloudEvents</a> schema and forward those events with the canonical metadata schema to other eventing Messaging Channels that support this schema and receive event messages via a http endpoint.</p>
@@ -327,22 +283,17 @@ In some scenarios, enterprises use more than one messaging system in the same so
 </tr>
 </tbody>
 </table>
-
-Message Bus
------------
-
-The **[Message Bus](https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageBus.html)** is a meta-pattern; which includes other messaging patterns, such as Publish-Subscribe Channels, Channel Adapter, Service Activators, Message Routers, Canonical Data Models, etc.; that acts as a middleware to connect multiple sender and receiver applications.
-
- **Implementation**
-
+<h2 id="message-bus">Message Bus</h2>
+<p>The <strong><a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageBus.html" rel=" noopener">Message Bus</a></strong> is a meta-pattern; which includes other messaging patterns, such as Publish-Subscribe Channels, Channel Adapter, Service Activators, Message Routers, Canonical Data Models, etc.; that acts as a middleware to connect multiple sender and receiver applications.</p>
+<p>&nbsp;<strong>Implementation</strong></p>
 <table>
 <tbody>
 <tr>
 <td width="74">
-<p><strong><img src="/assets/img/2019/05/Logic Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
-<p><strong><img src="/assets/img/2019/06/Azure Service Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80"></strong></p>
-<p><strong><img src="/assets/img/2019/06/Event Grid.png" alt="Event Grid" width="81"></strong></p>
-<p><strong><img src="/assets/img/2019/06/Azure Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81"></strong></p>
+<p><strong><img src="/assets/img/2019/04/Azure%20Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="633">
 <p>To implement this meta-pattern on Azure, we need a combination of all the Azure Integration Services, including Logic Apps, Azure Service Bus, Event Grid, Azure Functions, etc.</p>
@@ -350,13 +301,9 @@ The **[Message Bus](https://www.enterpriseintegrationpatterns.com/patterns/messa
 </tr>
 </tbody>
 </table>
-
-Wrapping Up
------------
-
-In this post, I have covered how to implement the **Messaging Channel** patterns using the Azure Integration Services. Some of these patterns are already out-of-the-box features of the platform, and in other cases we need to create our own implementation. As mentioned previously, being aware of these patterns and the challenges they address, allow us to be much better prepared when architecting message-based enterprise integration solutions.
-
-Happy integration! 
+<h2>Wrapping Up</h2>
+<p>In this post, I have covered how to implement the <strong>Messaging Channel</strong> patterns using the Azure Integration Services. Some of these patterns are already out-of-the-box features of the platform, and in other cases we need to create our own implementation. As mentioned previously, being aware of these patterns and the challenges they address, allow us to be much better prepared when architecting message-based enterprise integration solutions.</p>
+<p>Happy integration!&nbsp;</p>
 
 <p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>
