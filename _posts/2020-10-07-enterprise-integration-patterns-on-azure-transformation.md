@@ -11,15 +11,15 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p><img src="/assets/img/2019/04/Transform8.jpg" alt="Transform8" width="4000" style="width: 4000px;"></p>
 <p>It is quite common that integration solutions interact with diverse applications, each with disparate data models and heterogeneous formats. In this post, we will discuss the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageTransformationIntro.html" rel="noopener" target="_blank">Message Transformation</a> patterns and how these can be implemented on Azure to overcome the challenges derived from working with different message structures and representations.</p>
 <!--more-->
-<p>This post is a part of a series describing how to implement the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/index.html" rel="noopener" target="_blank"><span>Enterprise Integration Patterns</span></a> using the <a href="/2017/02/10/microsoft-azure-ipaas" rel="noopener" target="_blank"><span>Azure Integration Services</span></a>:</p>
+<p>This post is a part of a series describing how to implement the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/index.html" rel="noopener" target="_blank"><span>Enterprise Integration Patterns</span></a> using the <a href="/microsoft-azure-ipaas" rel="noopener" target="_blank"><span>Azure Integration Services</span></a>:</p>
 <ol>
-<li><a href="/2019/03/08/enterprise-integration-patterns-on-azure-intro" rel="noopener" target="_blank">Introduction</a></li>
-<li><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">Message Construction</a></li>
-<li><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank">Messaging Channels</a></li>
-<li><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
-<li><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank">Message Routing</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-intro" rel="noopener" target="_blank">Introduction</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">Message Construction</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank">Messaging Channels</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank">Message Routing</a></li>
 <li>Message Transformation (this)</li>
-<li><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
 </ol>
 <p>The patterns covered in this article are listed below.</p>
 <ul>
@@ -51,7 +51,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <td style="width: 538px; height: 495px;">
 <p>There are different ways to transform messages in Logic Apps</p>
 <p>For data structure and data type transformations:</p>
-<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://platform.deloitte.com.au/articles/transforming-json-objects-in-logic-apps" rel="noopener" target="_blank">Simple JSON object transformation with built-in actions </a></p>
+<p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="/transforming-json-objects-in-logic-apps" rel="noopener" target="_blank">Simple JSON object transformation with built-in actions </a></p>
 <p>·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-enterprise-integration-liquid-transform" rel="noopener" target="_blank">Advanced JSON object transformations with Liquid templates</a></p>
 <p><span><span style="text-decoration: none;">·&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-enterprise-integration-transform" rel="noopener" target="_blank">Transform XML to XML</a></p>
 <p>For data representation transformations:</p>
@@ -84,7 +84,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <tr style="height: 91px;">
 <td style="height: 91px; width: 96px;"><strong><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"></strong></td>
 <td style="height: 91px; width: 538px;">
-<p>On Logic Apps, an <strong>Envelope Wrapper</strong> can easily be added and removed using the <em>Compose</em> built-in action as <a href="https://platform.deloitte.com.au/articles/transforming-json-objects-in-logic-apps" rel="noopener" target="_blank">shown here</a> or leveraging <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-enterprise-integration-liquid-transform" rel="noopener" target="_blank">Liquid templates</a> for more complex scenarios.</p>
+<p>On Logic Apps, an <strong>Envelope Wrapper</strong> can easily be added and removed using the <em>Compose</em> built-in action as <a href="/transforming-json-objects-in-logic-apps" rel="noopener" target="_blank">shown here</a> or leveraging <a href="https://docs.microsoft.com/en-us/azure/logic-apps/logic-apps-enterprise-integration-liquid-transform" rel="noopener" target="_blank">Liquid templates</a> for more complex scenarios.</p>
 </td>
 </tr>
 <tr style="height: 51px;">
@@ -143,7 +143,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 </table>
 <h1 id="claim-check">Claim-Check</h1>
 <p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.html"><strong>Claim-Check</strong></a> pattern is helpful when the message size must be reduced without losing information. This pattern suggests that the full message can be stored in a durable store and a claim can be passed to subsequence components. Those components would use the claim to retrieve the message persisted.</p>
-<p>When the main limitation is the <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank"><strong>Message Channel</strong></a>’s message size limitation, consider using the <span style="background-color: transparent;"></span><a href="#compression-decompression" style="background-color: transparent;"><strong>Compression/Decompression (*)</strong>&nbsp;</a>pattern when applicable to avoid managing another component for storage and the lifecycle of the persisted messages.</p>
+<p>When the main limitation is the <a href="/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank"><strong>Message Channel</strong></a>’s message size limitation, consider using the <span style="background-color: transparent;"></span><a href="#compression-decompression" style="background-color: transparent;"><strong>Compression/Decompression (*)</strong>&nbsp;</a>pattern when applicable to avoid managing another component for storage and the lifecycle of the persisted messages.</p>
 <p><strong>Implementation</strong></p>
 <table style="height: 97px;">
 <tbody>
@@ -166,7 +166,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 </tbody>
 </table>
 <h1 id="normaliser">Normaliser</h1>
-<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/Normalizer.html" rel="noopener" target="_blank"><strong>Normaliser</strong></a> is a special type of Message Translator that translates semantically equivalent messages but with different structures to a common format. The Normaliser is a combination of a <a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank"><strong>Message Router</strong></a> and a set of <strong>Message Translators</strong>.</p>
+<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/Normalizer.html" rel="noopener" target="_blank"><strong>Normaliser</strong></a> is a special type of Message Translator that translates semantically equivalent messages but with different structures to a common format. The Normaliser is a combination of a <a href="/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank"><strong>Message Router</strong></a> and a set of <strong>Message Translators</strong>.</p>
 <p><strong>Implementation</strong></p>
 <p><em>The implementation of each of the part of this composed pattern has been described previously. </em></p>
 <h1 id="canonical-data-model">Canonical Data Model</h1>

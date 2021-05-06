@@ -25,7 +25,7 @@ In this post, I’ll show how to implement business rules in Logic Apps using Li
 <h2>Scenario</h2>
 &nbsp;
 
-<a href="/2017/07/17/correlation-identifier-pattern-on-logic-apps/">Farm to Table</a>, the fresh produce drone delivery company, want to implement some business rules to be applied when receiving orders. All the order processing is currently handled by Logic Apps. These business rules can change over time, and they want to be able to update them with the minimal effort (think of development, testing and deployment). They have two main business rules: 1) to define whether an order must be manually approved and 2) applying discounts based on promotions. Promotions rules change much more often than approval rules. Because these rules change often, they want to externalise them from the Logic App workflow.
+<a href="/correlation-identifier-pattern-on-logic-apps/">Farm to Table</a>, the fresh produce drone delivery company, want to implement some business rules to be applied when receiving orders. All the order processing is currently handled by Logic Apps. These business rules can change over time, and they want to be able to update them with the minimal effort (think of development, testing and deployment). They have two main business rules: 1) to define whether an order must be manually approved and 2) applying discounts based on promotions. Promotions rules change much more often than approval rules. Because these rules change often, they want to externalise them from the Logic App workflow.
 
 They want to implement the following business rules:
 <ul>

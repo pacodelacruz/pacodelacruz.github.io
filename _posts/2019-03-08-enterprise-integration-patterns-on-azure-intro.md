@@ -45,7 +45,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>It is worth mentioning that these authors have been working on new Messaging patterns focusing <a href="https://www.enterpriseintegrationpatterns.com/patterns/conversation/index.html" rel="noopener" target="_blank">on conversational and stateful</a> scenarios. These conversations can happen through asynchronous queue-based messaging or via direct synchronous calls.</p>
 <p>If you want to build manageable, robust and resilient enterprise-grade enterprise messaging integration solutions, you must be aware of the Enterprise Integration Patterns to make sure you are making the best use of the available technologies to solve the functional and technical challenges.</p>
 <h1>Azure Integration Services Overview</h1>
-<p>The Azure Integration Services, is the set of services and platforms on Azure that we can leverage to develop, implement and manage enterprise-class integration solutions. The figure below, shows the different capabilities of an iPaaS, and which component of the Azure Integration Services we can use to implement them. You can find more details in <a href="/articles/microsoft-azure-ipaas" rel="noopener" target="_blank">this post</a>.</p>
+<p>The Azure Integration Services, is the set of services and platforms on Azure that we can leverage to develop, implement and manage enterprise-class integration solutions. The figure below, shows the different capabilities of an iPaaS, and which component of the Azure Integration Services we can use to implement them. You can find more details in <a href="/microsoft-azure-ipaas" rel="noopener" target="_blank">this post</a>.</p>
 <p>&nbsp;<img src="/assets/img/2019/04/01%20Azure%20Integration%20Services.png" alt="01 Azure Integration Services" width="1104" style="width: 1104px;"></p>
 <p>&nbsp;</p>
 <h1>Challenges tackled by the Enterprise Integration Patterns</h1>
@@ -70,10 +70,10 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we define and structure my messages? What data should I include?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#document-message" rel="noopener" target="_blank">Document Message</a></p>
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#event-message" rel="noopener" target="_blank">Event Message</a></p>
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#command-message" rel="noopener" target="_blank">Command Message</a></p>
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#query-message" rel="noopener" target="_blank">Query Message (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#document-message" rel="noopener" target="_blank">Document Message</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#event-message" rel="noopener" target="_blank">Event Message</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#command-message" rel="noopener" target="_blank">Command Message</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#query-message" rel="noopener" target="_blank">Query Message (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -81,7 +81,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we shape the content of our message? Should the content and structure be coupled to an application context? Or decoupled from applications and defined to cover an organisation or industry domain?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-model" rel="noopener" target="_blank">Message Model (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#message-model" rel="noopener" target="_blank">Message Model (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -89,7 +89,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>What data should we include as metadata for messages to be routed, processed, grouped or tracked as required?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-header" rel="noopener" target="_blank">Message Header (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#message-header" rel="noopener" target="_blank">Message Header (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -97,7 +97,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we define messages that support two-way communication between different applications?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#request-reply" rel="noopener" target="_blank">Request-Reply</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#request-reply" rel="noopener" target="_blank">Request-Reply</a></p>
 </td>
 </tr>
 <tr>
@@ -105,7 +105,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we instruct a receiver application that a response is to be sent to a particular endpoint?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#return-address" rel="noopener" target="_blank">Return Address</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#return-address" rel="noopener" target="_blank">Return Address</a></p>
 </td>
 </tr>
 <tr>
@@ -113,7 +113,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>When there is a two-way communication via messaging, how can we correlate a response to the corresponding request?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#correlation-identifier" rel="noopener" target="_blank">Correlation Identifier</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#correlation-identifier" rel="noopener" target="_blank">Correlation Identifier</a></p>
 </td>
 </tr>
 <tr>
@@ -121,7 +121,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we identify when messages are to be processed as part of a group and in a particular sequence?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-sequence" rel="noopener" target="_blank">Message Sequence</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#message-sequence" rel="noopener" target="_blank">Message Sequence</a></p>
 </td>
 </tr>
 <tr>
@@ -129,7 +129,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we define a valid lifespan of a message?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-expiration" rel="noopener" target="_blank">Message Expiration</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#message-expiration" rel="noopener" target="_blank">Message Expiration</a></p>
 </td>
 </tr>
 <tr>
@@ -137,7 +137,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we defer a message to be processed after a certain point in time?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-activation" rel="noopener" target="_blank">Message Activation (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#message-activation" rel="noopener" target="_blank">Message Activation (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -145,7 +145,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we inform the receiver application the format a message is structured in? How can we support multiple versions of a message structure?</p>
 </td>
 <td width="312">
-<p><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#format-indicator" rel="noopener" target="_blank">Format indicator</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-message-construction#format-indicator" rel="noopener" target="_blank">Format indicator</a></p>
 </td>
 </tr>
 </tbody>
@@ -168,8 +168,8 @@ The remaining posts will be published in the following weeks / months. 
 <p>Shall we implement a direct interface between the sender application and the receiver application? Or shall the sender be unaware of potential receiver applications?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#point-to-point-channel" rel="noopener" target="_blank">Point-to-Point Channel</a></p>
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#publish-subscribe-channel" rel="noopener" target="_blank">Publish-Subscribe Channel</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#point-to-point-channel" rel="noopener" target="_blank">Point-to-Point Channel</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#publish-subscribe-channel" rel="noopener" target="_blank">Publish-Subscribe Channel</a></p>
 </td>
 </tr>
 <tr>
@@ -177,8 +177,8 @@ The remaining posts will be published in the following weeks / months. 
 <p>How is the receiver application meant to receive the message? Does it need to pull the message from the channel, or should the channel push the message to it?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel" rel="noopener" target="_blank">Push-Pull Channel (*)</a></p>
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#push-push-channel" rel="noopener" target="_blank">Push-Push Channel (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel" rel="noopener" target="_blank">Push-Pull Channel (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#push-push-channel" rel="noopener" target="_blank">Push-Push Channel (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -186,7 +186,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we define a channel in a way that receivers know how to process a message?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#data-type-channel" rel="noopener" target="_blank">Datatype Channel</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#data-type-channel" rel="noopener" target="_blank">Datatype Channel</a></p>
 </td>
 </tr>
 <tr>
@@ -194,7 +194,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we manage invalid messages going through the channel?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#invalid-message-channel" rel="noopener" target="_blank">Invalid Message Channel</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#invalid-message-channel" rel="noopener" target="_blank">Invalid Message Channel</a></p>
 </td>
 </tr>
 <tr>
@@ -202,7 +202,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>Where do we store messages when they cannot longer be processed by the intended receiver?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#dead-letter-channel" rel="noopener" target="_blank">Dead-Letter Channel</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#dead-letter-channel" rel="noopener" target="_blank">Dead-Letter Channel</a></p>
 </td>
 </tr>
 <tr>
@@ -210,7 +210,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we make sure a message is delivered to the intended receiver?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#guaranteed-delivery" rel="noopener" target="_blank">Guaranteed Delivery</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#guaranteed-delivery" rel="noopener" target="_blank">Guaranteed Delivery</a></p>
 </td>
 </tr>
 <tr>
@@ -218,7 +218,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>When implementing Guaranteed Delivery, how do we make sure that retries don’t have a negative impact on the intended receiver’s health or performance?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#circuit-breaker" rel="noopener" target="_blank">Circuit Breaker (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#circuit-breaker" rel="noopener" target="_blank">Circuit Breaker (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -226,7 +226,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we reduce the complexity of sending messages to a particular channel?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#channel-adapter" rel="noopener" target="_blank">Channel Adapter</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#channel-adapter" rel="noopener" target="_blank">Channel Adapter</a></p>
 </td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we connect multiple applications so that they can communicate via messaging in a decoupled and organised manner?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#message-bus" rel="noopener" target="_blank">Message Bus</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#message-bus" rel="noopener" target="_blank">Message Bus</a></p>
 </td>
 </tr>
 <tr>
@@ -242,7 +242,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>When using disparate Message Channels, how can we connect the two?</p>
 </td>
 <td width="312">
-<p><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#messaging-bridge" rel="noopener" target="_blank">Messaging Bridge</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-messaging-channels#messaging-bridge" rel="noopener" target="_blank">Messaging Bridge</a></p>
 </td>
 </tr>
 </tbody>
@@ -265,7 +265,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we reduce the complexity of receiving or sending messages to a particular application?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#application-adapter" rel="noopener" target="_blank">Application Adapter (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#application-adapter" rel="noopener" target="_blank">Application Adapter (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -273,7 +273,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we reduce the complexity of connecting a messaging channel to an application?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#messaging-gateway" rel="noopener" target="_blank">Messaging Gateway</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#messaging-gateway" rel="noopener" target="_blank">Messaging Gateway</a></p>
 </td>
 </tr>
 <tr>
@@ -281,7 +281,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we map and serialise an applications domain object in the database into a meaningful independent message?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#messaging-mapper" rel="noopener" target="_blank">Messaging Mapper</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#messaging-mapper" rel="noopener" target="_blank">Messaging Mapper</a></p>
 </td>
 </tr>
 <tr>
@@ -289,7 +289,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we implement transactions so that messages are not lost in the process of sending or receiving a message to or from a channel?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#transactional-client" rel="noopener" target="_blank">Transactional Client</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#transactional-client" rel="noopener" target="_blank">Transactional Client</a></p>
 </td>
 </tr>
 <tr>
@@ -297,7 +297,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can messages be consumed based on the readiness of the consumer?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#polling-consumer" rel="noopener" target="_blank">Polling Consumer (Message Pull)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#polling-consumer" rel="noopener" target="_blank">Polling Consumer (Message Pull)</a></p>
 </td>
 </tr>
 <tr>
@@ -305,7 +305,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can messages be consumed as soon as they are available?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#event-driven-consumer" rel="noopener" target="_blank">Event-Driven Consumer (Message Push)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#event-driven-consumer" rel="noopener" target="_blank">Event-Driven Consumer (Message Push)</a></p>
 </td>
 </tr>
 <tr>
@@ -313,7 +313,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we process multiple messages at a time with multiples workers on the receiver application?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#competing-consumers" rel="noopener" target="_blank">Competing Consumers</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#competing-consumers" rel="noopener" target="_blank">Competing Consumers</a></p>
 </td>
 </tr>
 <tr>
@@ -321,8 +321,8 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we control how many messages are processed at a given time based on the receiver requirements or capacity?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#throttled-consumer" rel="noopener" target="_blank">Throttled Consumer (*)</a></p>
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#singleton-consumer" rel="noopener" target="_blank">Singleton Consumer (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#throttled-consumer" rel="noopener" target="_blank">Throttled Consumer (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#singleton-consumer" rel="noopener" target="_blank">Singleton Consumer (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -330,7 +330,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can a receiver application select which messages to consume?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#selective-consumer" rel="noopener" target="_blank">Selective Consumer</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#selective-consumer" rel="noopener" target="_blank">Selective Consumer</a></p>
 </td>
 </tr>
 <tr>
@@ -338,7 +338,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can different consumers receive messages in a coordinated and selective way from a single channel</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#message-dispatcher" rel="noopener" target="_blank">Message Dispatcher</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#message-dispatcher" rel="noopener" target="_blank">Message Dispatcher</a></p>
 </td>
 </tr>
 <tr>
@@ -346,7 +346,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can receiver applications avoid missing messages while they are not online or listening to the channel?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#durable-subscriber" rel="noopener" target="_blank">Durable Subscriber</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#durable-subscriber" rel="noopener" target="_blank">Durable Subscriber</a></p>
 </td>
 </tr>
 <tr>
@@ -354,7 +354,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can a receiver application deal with duplicate or stale messages?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#idempotent-receiver" rel="noopener" target="_blank">Idempotent Receiver</a><br><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#stale-message" rel="noopener" target="_blank">Stale Message (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#idempotent-receiver" rel="noopener" target="_blank">Idempotent Receiver</a><br><a href="/enterprise-integration-patterns-on-azure-endpoints#stale-message" rel="noopener" target="_blank">Stale Message (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -362,7 +362,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can sender or receiver application restrict the time when they can send or receive messages to or from the channel?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#service-window" rel="noopener" target="_blank">Service Window (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#service-window" rel="noopener" target="_blank">Service Window (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -370,7 +370,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can a receiver application consume messages received via both asynchronous messaging and synchronous channels?</p>
 </td>
 <td width="312">
-<p><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#service-activator" rel="noopener" target="_blank">Service Activator</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-endpoints#service-activator" rel="noopener" target="_blank">Service Activator</a></p>
 </td>
 </tr>
 </tbody>
@@ -393,7 +393,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we perform different complex processing steps while maintaining some level of decoupling and flexibility?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#pipes-and-filters" rel="noopener" target="_blank">Pipes and Filters</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#pipes-and-filters" rel="noopener" target="_blank">Pipes and Filters</a></p>
 </td>
 </tr>
 <tr>
@@ -401,7 +401,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we pass messages to different filters, components or receivers depending on a set of conditions?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing" rel="noopener">Message Router</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing" rel="noopener">Message Router</a></p>
 </td>
 </tr>
 <tr>
@@ -409,7 +409,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we implement dynamic routing based on the content or headers of a message?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#content-based-router" rel="noopener" target="_blank">Content-Based Routing</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#content-based-router" rel="noopener" target="_blank">Content-Based Routing</a></p>
 </td>
 </tr>
 <tr>
@@ -417,7 +417,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we avoid non-relevant messages to be delivered?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#message-filter" rel="noopener" target="_blank">Message Filter</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#message-filter" rel="noopener" target="_blank">Message Filter</a></p>
 </td>
 </tr>
 <tr>
@@ -425,7 +425,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we validate whether a message is valid?&nbsp;</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#message-validator" rel="noopener" target="_blank">Message Validation (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#message-validator" rel="noopener" target="_blank">Message Validation (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -433,7 +433,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we maintain a dynamic configuration on the routing rules based on the receivers needs?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#dynamic-router" rel="noopener" target="_blank">Dynamic Router</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#dynamic-router" rel="noopener" target="_blank">Dynamic Router</a></p>
 </td>
 </tr>
 <tr>
@@ -441,7 +441,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we let the message define the list of receivers?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#recipient-list" rel="noopener" target="_blank">Recipient List</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#recipient-list" rel="noopener" target="_blank">Recipient List</a></p>
 </td>
 </tr>
 <tr>
@@ -449,7 +449,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we distribute load across multiple regions or minimise the dispatch of messages to unavailable endpoints?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#load-balancer" rel="noopener" target="_blank">Load Balancer (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#load-balancer" rel="noopener" target="_blank">Load Balancer (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -457,7 +457,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we process messages which are composed of multiple elements which require its own processing?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#splitter" rel="noopener" target="_blank">Splitter</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#splitter" rel="noopener" target="_blank">Splitter</a></p>
 </td>
 </tr>
 <tr>
@@ -465,7 +465,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we combine different messages into a larger message?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#aggregator" rel="noopener" target="_blank">Aggregator (Batching)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#aggregator" rel="noopener" target="_blank">Aggregator (Batching)</a></p>
 </td>
 </tr>
 <tr>
@@ -473,7 +473,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>When messages are in the right order in the Messaging Channel, how can we make sure that they are processed in the correct order?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#first-in-first-out" rel="noopener" target="_blank">First-in, First-out (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#first-in-first-out" rel="noopener" target="_blank">First-in, First-out (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -481,7 +481,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we get out-of-sequence related messages back into sequence?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#resequencer" rel="noopener" target="_blank">Resequencer</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#resequencer" rel="noopener" target="_blank">Resequencer</a></p>
 </td>
 </tr>
 <tr>
@@ -489,7 +489,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How to process a message composed of multiple elements, which require a coordinated but different handling?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#composed-message-processor" rel="noopener" target="_blank">Composed Message Processor</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#composed-message-processor" rel="noopener" target="_blank">Composed Message Processor</a></p>
 </td>
 </tr>
 <tr>
@@ -497,7 +497,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How to process messages which are to be sent to multiple receivers, for each of which we need to receive and process and response?&nbsp;</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#scatter-gather" rel="noopener" target="_blank">Scatter-Gather</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#scatter-gather" rel="noopener" target="_blank">Scatter-Gather</a></p>
 </td>
 </tr>
 <tr>
@@ -505,7 +505,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we handle a message which is to be sent for processing to different steps when the sequence is defined at runtime?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#routing-slip" rel="noopener" target="_blank">Routing Slip</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#routing-slip" rel="noopener" target="_blank">Routing Slip</a></p>
 </td>
 </tr>
 <tr>
@@ -513,7 +513,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we route a message through different processing steps when these are not sequential?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#process-manager" rel="noopener" target="_blank">Process Manager</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#process-manager" rel="noopener" target="_blank">Process Manager</a></p>
 </td>
 </tr>
 <tr>
@@ -521,7 +521,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How to avoid point-to-point integrations by decoupling senders and receivers while maintaining a centralised control of the message routing?</p>
 </td>
 <td width="312">
-<p><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing#message-broker" rel="noopener" target="_blank">Message Broker</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-routing#message-broker" rel="noopener" target="_blank">Message Broker</a></p>
 </td>
 </tr>
 </tbody>
@@ -544,7 +544,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How to interchange information between different systems when they all use different formats and structures?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#message-translator" rel="noopener" target="_blank">Message Translator</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#message-translator" rel="noopener" target="_blank">Message Translator</a></p>
 </td>
 </tr>
 <tr>
@@ -552,7 +552,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we add metadata to a message body when it is required by the messaging channels or processors?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#envelope-wrapper" rel="noopener" target="_blank">Envelope Wrapper</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#envelope-wrapper" rel="noopener" target="_blank">Envelope Wrapper</a></p>
 </td>
 </tr>
 <tr>
@@ -560,7 +560,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we satisfy a receiver application data requirements when not all the fields are available in the original system produced by the sender?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#content-enricher" rel="noopener" target="_blank">Content Enricher</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#content-enricher" rel="noopener" target="_blank">Content Enricher</a></p>
 </td>
 </tr>
 <tr>
@@ -568,7 +568,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we simplify a message when the original message is too complex or large for the intended receiver application? <br>How do we remove sensitive data fields that are not intended for a receiver application?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#content-filter" rel="noopener" target="_blank">Content Filter</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#content-filter" rel="noopener" target="_blank">Content Filter</a></p>
 </td>
 </tr>
 <tr>
@@ -577,7 +577,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we reduce the bandwidth requirements to interchange large messages between components while making the whole message available?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#claim-check" rel="noopener" target="_blank">Claim-Check</a><br><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#compression-decompression" rel="noopener" target="_blank">Compression/Decompression (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#claim-check" rel="noopener" target="_blank">Claim-Check</a><br><a href="/enterprise-integration-patterns-on-azure-transformation#compression-decompression" rel="noopener" target="_blank">Compression/Decompression (*)</a></p>
 </td>
 </tr>
 <tr>
@@ -585,7 +585,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How do we standardise messages that contain same business information represented in different formats?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#normaliser" rel="noopener" target="_blank">Normaliser</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#normaliser" rel="noopener" target="_blank">Normaliser</a></p>
 </td>
 </tr>
 <tr>
@@ -593,7 +593,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can you minimise coupling between applications that interchange messages when they use different message formats or structures?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#canonical-data-model" rel="noopener" target="_blank">Canonical Data Model</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#canonical-data-model" rel="noopener" target="_blank">Canonical Data Model</a></p>
 </td>
 </tr>
 <tr>
@@ -601,7 +601,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we secure the message content when sensitive data could be captured by a man-in-the-middle attack?</p>
 </td>
 <td width="312">
-<p><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation#encryption-decryption" rel="noopener" target="_blank">Encryption/Decryption (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-transformation#encryption-decryption" rel="noopener" target="_blank">Encryption/Decryption (*)</a></p>
 </td>
 </tr>
 </tbody>
@@ -624,7 +624,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we manage integration solutions that leverage multiple platforms and deployed across multiple regions?</p>
 </td>
 <td style="height: 113px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#control-bus" rel="noopener" target="_blank">Control Bus</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#control-bus" rel="noopener" target="_blank">Control Bus</a></p>
 </td>
 </tr>
 <tr style="height: 135px;">
@@ -632,7 +632,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How could we control the series of steps messages are to go through based on external factors to maximise the manageability and operability of the solution?</p>
 </td>
 <td style="height: 135px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#detour" rel="noopener" target="_blank">Detour</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#detour" rel="noopener" target="_blank">Detour</a></p>
 </td>
 </tr>
 <tr style="height: 113px;">
@@ -640,7 +640,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can you inspect messages that are being processed through a particular step or messaging channel?</p>
 </td>
 <td style="height: 113px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#wire%20Tap" rel="noopener" target="_blank">Wire Tap&nbsp;</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#wire%20Tap" rel="noopener" target="_blank">Wire Tap&nbsp;</a></p>
 </td>
 </tr>
 <tr style="height: 113px;">
@@ -648,7 +648,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can you trace and analyse messages that are being processed across multiple service and components?</p>
 </td>
 <td style="height: 113px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#message-history" rel="noopener" target="_blank">Message History</a> / <a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#message-store" rel="noopener" target="_blank">Message Store</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#message-history" rel="noopener" target="_blank">Message History</a> / <a href="/enterprise-integration-patterns-on-azure-platform#message-store" rel="noopener" target="_blank">Message Store</a></p>
 </td>
 </tr>
 <tr style="height: 113px;">
@@ -656,7 +656,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can you be aware of messages that could not be processed, and potentially fix them, to then resubmit them?</p>
 </td>
 <td style="height: 113px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#message-resubmission" rel="noopener" target="_blank">Message Resubmission (*)</a> / <a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#repair-and-resubmit" rel="noopener" target="_blank">Repair and Resubmit (*)</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#message-resubmission" rel="noopener" target="_blank">Message Resubmission (*)</a> / <a href="/enterprise-integration-patterns-on-azure-platform#repair-and-resubmit" rel="noopener" target="_blank">Repair and Resubmit (*)</a></p>
 </td>
 </tr>
 <tr style="height: 91px;">
@@ -664,7 +664,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can you track that an expected reply message has been received for a particular request?</p>
 </td>
 <td style="height: 91px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#smart-proxy" rel="noopener" target="_blank">Smart Proxy</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#smart-proxy" rel="noopener" target="_blank">Smart Proxy</a></p>
 </td>
 </tr>
 <tr style="height: 113px;">
@@ -672,7 +672,7 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can you test the health of a messaging solution end-to-end in production without unexpected side effects?</p>
 </td>
 <td style="height: 113px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#test-message" rel="noopener" target="_blank">Test Message</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#test-message" rel="noopener" target="_blank">Test Message</a></p>
 </td>
 </tr>
 <tr style="height: 68px;">
@@ -680,14 +680,14 @@ The remaining posts will be published in the following weeks / months. 
 <p>How can we remove stale messages from a channel?</p>
 </td>
 <td style="height: 68px; width: 261.025px;">
-<p><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#channel-purger" rel="noopener" target="_blank">Channel Purger</a></p>
+<p><a href="/enterprise-integration-patterns-on-azure-platform#channel-purger" rel="noopener" target="_blank">Channel Purger</a></p>
 </td>
 </tr>
 <tr style="height: 91px;">
 <td style="height: 91px; width: 261.025px;">
 <p>How can we get notified when the platform is not performing as expected?</p>
 </td>
-<td style="height: 91px; width: 261.025px;"><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform#monitoring-events-and-alerts" rel="noopener" target="_blank">Monitoring Events and Alerts (*)</a></td>
+<td style="height: 91px; width: 261.025px;"><a href="/enterprise-integration-patterns-on-azure-platform#monitoring-events-and-alerts" rel="noopener" target="_blank">Monitoring Events and Alerts (*)</a></td>
 </tr>
 </tbody>
 </table>

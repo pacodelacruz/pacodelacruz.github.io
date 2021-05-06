@@ -12,13 +12,13 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p>When we are designing a message-based integration solution, one of the first things we need to define is how the application data are going to be serialised into messages, so they can be transmitted to other applications. The <span><strong><a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageConstructionIntro.html" rel="noopener" target="_blank">Message Construction</a></strong></span> Enterprise Integration Patterns provide documented knowledge that can be leveraged when defining messages. In this post, I’ll cover the Message Construction patterns and how these can be implemented using the Azure Integration Services. This is a part of the series which describes how to implement the <a href="https://www.enterpriseintegrationpatterns.com/" rel="noopener" target="_blank">Enterprise Integration Patterns</a> on Azure:</p>
 <!--more-->
 <ol>
-<li><span><a href="/2019/03/08/enterprise-integration-patterns-on-azure-intro" rel="noopener" target="_blank">Introduction</a></span></li>
+<li><span><a href="/enterprise-integration-patterns-on-azure-intro" rel="noopener" target="_blank">Introduction</a></span></li>
 <li>Message Construction (this)</li>
-<li><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank">Messaging Channels</a></li>
-<li><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
-<li><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank">Message Routing</a></li>
-<li><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation" rel="noopener">Message Transformation</a></li>
-<li><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank">Messaging Channels</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank">Message Routing</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-transformation" rel="noopener">Message Transformation</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
 </ol>
 <p>The remaining posts will be published in the following weeks / months.</p>
 <p>When we are designing how the data are to be transmitted, we need to consider:</p>
@@ -247,19 +247,19 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <td width="75"><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"></td>
 <td width="632">
 <p>On Logic Apps, the <strong>Request-Reply</strong> pattern can be implemented with the Webhook action, which covers out-of-the-box the <strong>Request-Reply</strong>, the <strong>Return Address</strong> and the <strong>Correlation Identifier</strong> patterns.</p>
-<p>This implementation is described <span><a href="/articles/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a></span>.</p>
+<p>This implementation is described <span><a href="/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a></span>.</p>
 </td>
 </tr>
 <tr>
 <td width="75"><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></td>
 <td width="632">
-<p>Additionally, using Logic Apps and the Service Bus trigger with sessions, we can implement this pattern and the <strong>Correlation Identifier</strong> as described <span><a href="/articles/logic-apps-correlation-and-message-dependency-management-on-logic-apps-with-service-bus" rel="noopener" target="_blank">here</a></span>.</p>
+<p>Additionally, using Logic Apps and the Service Bus trigger with sessions, we can implement this pattern and the <strong>Correlation Identifier</strong> as described <span><a href="/logic-apps-correlation-and-message-dependency-management-on-logic-apps-with-service-bus" rel="noopener" target="_blank">here</a></span>.</p>
 </td>
 </tr>
 <tr>
 <td width="75"><img src="/assets/img/2019/04/Azure%20Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></td>
 <td width="632">
-<p>When code-based workflows are preferred, Azure Durable Functions can also be utilised to implement the <strong>Request-Reply</strong>, the <strong>Return Address</strong> and the <strong>Correlation Identifier</strong> patterns as described in <span><a href="/articles/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">this post</a></span>.</p>
+<p>When code-based workflows are preferred, Azure Durable Functions can also be utilised to implement the <strong>Request-Reply</strong>, the <strong>Return Address</strong> and the <strong>Correlation Identifier</strong> patterns as described in <span><a href="/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">this post</a></span>.</p>
 </td>
 </tr>
 </tbody>
@@ -272,7 +272,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <tr>
 <td width="75"><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"></td>
 <td width="632">
-<p>The Logic Apps Webhook action implements the <strong>Return Address</strong> out-of-the-box. The Return Address also includes a <strong>Correlation Identifier</strong> which links to the workflow instance that sends the request and is waiting for a response. This implementation is described <span><a href="/articles/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a></span>.</p>
+<p>The Logic Apps Webhook action implements the <strong>Return Address</strong> out-of-the-box. The Return Address also includes a <strong>Correlation Identifier</strong> which links to the workflow instance that sends the request and is waiting for a response. This implementation is described <span><a href="/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a></span>.</p>
 </td>
 </tr>
 <tr>
@@ -285,7 +285,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <tr>
 <td width="75"><img src="/assets/img/2019/04/Azure%20Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></td>
 <td width="632">
-<p>When implementing this on Durable Functions, you need to specify the Return Address, e.g. the http endpoint where a Durable Function client is listening to continue with the workflow. Additionally, you would need to send a <strong>Correlation Identifier</strong> (e.g. the orchestration <em>instanceId</em> explained below) to be able to correlate the reply with the original request, as described in <span><a href="/articles/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">this post</a></span>.</p>
+<p>When implementing this on Durable Functions, you need to specify the Return Address, e.g. the http endpoint where a Durable Function client is listening to continue with the workflow. Additionally, you would need to send a <strong>Correlation Identifier</strong> (e.g. the orchestration <em>instanceId</em> explained below) to be able to correlate the reply with the original request, as described in <span><a href="/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">this post</a></span>.</p>
 </td>
 </tr>
 </tbody>
@@ -298,7 +298,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <tr>
 <td width="75"><img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"></td>
 <td width="632">
-<p>The Logic Apps Webhook action implements the <strong>Correlation Identifier </strong>together with the <strong>Request Reply</strong> and <strong>Return Address</strong> patterns out-of-the-box as described <span><a href="/articles/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a></span>. If the original <strong>Correlation Identifier</strong> is not accepted by the replier, a mapping between a unique value in the message and the <strong>Correlation Identifier</strong> can be implemented as described in the <span><a href="/articles/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">post</a></span>.&nbsp;</p>
+<p>The Logic Apps Webhook action implements the <strong>Correlation Identifier </strong>together with the <strong>Request Reply</strong> and <strong>Return Address</strong> patterns out-of-the-box as described <span><a href="/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a></span>. If the original <strong>Correlation Identifier</strong> is not accepted by the replier, a mapping between a unique value in the message and the <strong>Correlation Identifier</strong> can be implemented as described in the <span><a href="/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">post</a></span>.&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -307,13 +307,13 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p><img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></p>
 </td>
 <td width="632">
-<p>When implementing the pattern using Logic Apps with the Service Bus trigger in the middle of the workflow, a Service Bus <strong><u>SessionId</u></strong> is used as <strong>Correlation Identifier</strong>. Additionally, this approach can process more than one replies for the same request as described <span><a href="/articles/logic-apps-correlation-and-message-dependency-management-on-logic-apps-with-service-bus" rel="noopener" target="_blank">here</a></span>.</p>
+<p>When implementing the pattern using Logic Apps with the Service Bus trigger in the middle of the workflow, a Service Bus <strong><u>SessionId</u></strong> is used as <strong>Correlation Identifier</strong>. Additionally, this approach can process more than one replies for the same request as described <span><a href="/logic-apps-correlation-and-message-dependency-management-on-logic-apps-with-service-bus" rel="noopener" target="_blank">here</a></span>.</p>
 </td>
 </tr>
 <tr>
 <td width="75"><img src="/assets/img/2019/04/Azure%20Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></td>
 <td width="632">
-<p>Each orchestration instance of Azure Durable Functions has an <em>instanceId. </em>This can be used as the <strong>Correlation Identifier</strong> as described in the <span><a href="/articles/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">post</a></span>.</p>
+<p>Each orchestration instance of Azure Durable Functions has an <em>instanceId. </em>This can be used as the <strong>Correlation Identifier</strong> as described in the <span><a href="/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">post</a></span>.</p>
 </td>
 </tr>
 </tbody>

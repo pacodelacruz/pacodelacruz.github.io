@@ -8,18 +8,18 @@ category: Architecture
 tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Event Grid, Azure Functions]
 ---
 <p><img src="/assets/img/2019/04/Channel%203.jpeg" alt="Channel 3" width="1920" style="width: 1920px;"></p>
-<p>In the <u><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">previous post</a> </u>of the series, I covered how application data are to be serialised and packaged into messages so they can be transmitted between applications. In this post, I’ll describe the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageChannel.html" rel="noopener" target="_blank"><strong>Messaging Channels</strong></a> patterns, which focus on solving the challenges of transmitting messages from a sender application to the intended receiver applications; and how these patterns can be implemented on the Azure Integration Services.&nbsp;<span>Those marked with an asterisk (*) are those which are not described&nbsp;</span><a href="https://www.enterpriseintegrationpatterns.com/books1.html" rel="noopener" target="_blank">in the original book</a><span>, but I suggest to consider.</span></p>
+<p>In the <u><a href="/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">previous post</a> </u>of the series, I covered how application data are to be serialised and packaged into messages so they can be transmitted between applications. In this post, I’ll describe the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageChannel.html" rel="noopener" target="_blank"><strong>Messaging Channels</strong></a> patterns, which focus on solving the challenges of transmitting messages from a sender application to the intended receiver applications; and how these patterns can be implemented on the Azure Integration Services.&nbsp;<span>Those marked with an asterisk (*) are those which are not described&nbsp;</span><a href="https://www.enterpriseintegrationpatterns.com/books1.html" rel="noopener" target="_blank">in the original book</a><span>, but I suggest to consider.</span></p>
 <!--more-->
 <p><strong>Messaging Channels</strong> can be defined statically or dynamically. Depending on different factors, different types of channels can be used. The different channels are described in the following sections.&nbsp;</p>
 <p>This is a part of a series describing how to implement the Enterprise Integration Patterns using the Azure Integration Services:</p>
 <ol>
-<li><a href="/2019/03/08/enterprise-integration-patterns-on-azure-intro" rel=" noopener">Introduction</a></li>
-<li><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction">Message Construction</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-intro" rel=" noopener">Introduction</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-message-construction">Message Construction</a></li>
 <li>Messaging Channels (this)</li>
-<li><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
-<li><a href="/2020/09/09/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank">Message Routing</a></li>
-<li><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation" rel="noopener">Message Transformation</a></li>
-<li><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-routing" rel="noopener" target="_blank">Message Routing</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-transformation" rel="noopener">Message Transformation</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
 </ol>
 <p>The remaining posts will be published in the following weeks/months.</p>
 <p>The patterns covered in this article are listed below.&nbsp;</p>

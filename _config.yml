@@ -16,11 +16,10 @@
 title: pacodelacruz.io
 email: 
 description: >- # this means to ignore newlines until "baseurl:"
-  My personal blog where I share my experience with the technologies I'm learning or exploring 
-  about cloud, software development, and cloud-native applications. Thanks for visiting! Paco :)
+  Paco de la Cruz's blog. Sharing my personal journey with Azure, cloud solution architecture, and software development. Thanks for visiting :) 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-permalink: /:year/:month/:day/:title
+permalink: /:title
 google_analytics: UA-142484998-1
 
 twitter_username: pacodelacruz

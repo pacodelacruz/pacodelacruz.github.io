@@ -9,17 +9,17 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 ---
 
 <p><img src="/assets/img/2019/04/RoutingPatterns.jpg" alt="RoutingPatterns" width="1200" style="width: 1200px;"></p>
-<p>In the <a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints">previous post</a> of the <a href="/2019/03/08/enterprise-integration-patterns-on-azure-intro">series on the Enterprise Integration Patterns on Azure</a>, I explored the <strong>Messaging Endpoint</strong> patterns, which abstract integration interfaces from the application internals when building messaging-based integration solutions. In this post, I will cover the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageRoutingIntro.html" rel="noopener" target="_blank"><strong>Message Routing</strong></a> patterns on Azure, which provide guidelines to decouple the source from the intended receivers by implementing message routing in the integration layer.</p>
+<p>In the <a href="/enterprise-integration-patterns-on-azure-endpoints">previous post</a> of the <a href="/enterprise-integration-patterns-on-azure-intro">series on the Enterprise Integration Patterns on Azure</a>, I explored the <strong>Messaging Endpoint</strong> patterns, which abstract integration interfaces from the application internals when building messaging-based integration solutions. In this post, I will cover the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageRoutingIntro.html" rel="noopener" target="_blank"><strong>Message Routing</strong></a> patterns on Azure, which provide guidelines to decouple the source from the intended receivers by implementing message routing in the integration layer.</p>
 <!--more-->
-<p>This post is a part of a series describing how to implement the Enterprise Integration Patterns using the <a href="/articles/microsoft-azure-ipaas" rel="noopener" target="_blank">Azure Integration Services</a>:</p>
+<p>This post is a part of a series describing how to implement the Enterprise Integration Patterns using the <a href="/microsoft-azure-ipaas" rel="noopener" target="_blank">Azure Integration Services</a>:</p>
 <ol>
-<li><a href="/2019/03/08/enterprise-integration-patterns-on-azure-intro" rel="noopener" target="_blank">Introduction</a></li>
-<li><a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">Message Construction</a></li>
-<li><a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank">Messaging Channels</a></li>
-<li><a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-intro" rel="noopener" target="_blank">Introduction</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">Message Construction</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-messaging-channels" rel="noopener" target="_blank">Messaging Channels</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-endpoints" rel="noopener" target="_blank">Messaging Endpoints</a></li>
 <li>Message Routing (this)</li>
-<li><a href="/2020/10/07/enterprise-integration-patterns-on-azure-transformation" rel="noopener">Message Transformation</a></li>
-<li><a href="/2020/12/10/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-transformation" rel="noopener">Message Transformation</a></li>
+<li><a href="/enterprise-integration-patterns-on-azure-platform" rel="noopener" target="_blank">Platform Management</a></li>
 </ol>
 <p>The remaining posts will be published in the following weeks/months.</p>
 <p>The patterns covered in this article are listed below.</p>
@@ -67,7 +67,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 </tbody>
 </table>
 <h2 id="content-based-router">Content-Based Router</h2>
-<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/ContentBasedRouter.html" rel="noopener" target="_blank"><strong>Content-Based Router</strong></a> pattern suggests that a router is in charge of routing messages into the corresponding channels based on their content. It can be used as part of the <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#publish-subscribe-channel" rel="noopener" target="_blank"><strong>Publish-Subscribe Channel</strong></a> pattern.</p>
+<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/ContentBasedRouter.html" rel="noopener" target="_blank"><strong>Content-Based Router</strong></a> pattern suggests that a router is in charge of routing messages into the corresponding channels based on their content. It can be used as part of the <a href="/enterprise-integration-patterns-on-azure-messaging-channels#publish-subscribe-channel" rel="noopener" target="_blank"><strong>Publish-Subscribe Channel</strong></a> pattern.</p>
 <p><strong>Implementation</strong></p>
 <table>
 <tbody>
@@ -76,7 +76,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p><strong> <img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="644">
-<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions" rel="noopener" target="_blank">Azure Service Bus topics and subscriptions</a> can be used as a <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel" rel="noopener" target="_blank"><strong>Push-Pull Channel</strong></a> to route messages based on their <a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-header" rel="noopener" target="_blank"><strong>Message Header</strong> (*)</a>. Messages put into a topic can be routed to zero, one or more topic subscriptions. Different <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/topic-filters" rel="noopener" target="_blank">types of filters</a> can be used for routing.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions" rel="noopener" target="_blank">Azure Service Bus topics and subscriptions</a> can be used as a <a href="/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel" rel="noopener" target="_blank"><strong>Push-Pull Channel</strong></a> to route messages based on their <a href="/enterprise-integration-patterns-on-azure-message-construction#message-header" rel="noopener" target="_blank"><strong>Message Header</strong> (*)</a>. Messages put into a topic can be routed to zero, one or more topic subscriptions. Different <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/topic-filters" rel="noopener" target="_blank">types of filters</a> can be used for routing.</p>
 </td>
 </tr>
 <tr>
@@ -84,7 +84,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p><strong> <img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81" style="width: 81px;"></strong></p>
 </td>
 <td width="644">
-<p><a href="https://docs.microsoft.com/en-us/azure/event-grid/concepts#event-subscriptions">Event Grid subscriptions</a> provide content-based routing on a <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#push-push-channel" rel="noopener" target="_blank"><strong>Push-Push Channel</strong></a>. Event Grid provides <a href="https://docs.microsoft.com/en-us/azure/event-grid/event-filtering" rel="noopener" target="_blank">different options for filtering</a>.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/event-grid/concepts#event-subscriptions">Event Grid subscriptions</a> provide content-based routing on a <a href="/enterprise-integration-patterns-on-azure-messaging-channels#push-push-channel" rel="noopener" target="_blank"><strong>Push-Push Channel</strong></a>. Event Grid provides <a href="https://docs.microsoft.com/en-us/azure/event-grid/event-filtering" rel="noopener" target="_blank">different options for filtering</a>.</p>
 </td>
 </tr>
 </tbody>
@@ -99,7 +99,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p><strong> <img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="644">
-<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions" rel="noopener" target="_blank">Azure Service Bus Topics and Subscriptions</a> can be used as a <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel" rel="noopener" target="_blank"><strong>Push-Pull Channel</strong></a> to route messages based on their <a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-header" rel="noopener" target="_blank"><strong>Message Header</strong> (*)</a>. The list of subscriptions that get the message is defined dynamically at run time based on filters.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions" rel="noopener" target="_blank">Azure Service Bus Topics and Subscriptions</a> can be used as a <a href="/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel" rel="noopener" target="_blank"><strong>Push-Pull Channel</strong></a> to route messages based on their <a href="/enterprise-integration-patterns-on-azure-message-construction#message-header" rel="noopener" target="_blank"><strong>Message Header</strong> (*)</a>. The list of subscriptions that get the message is defined dynamically at run time based on filters.</p>
 <p>&nbsp;</p>
 </td>
 </tr>
@@ -108,7 +108,7 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p><strong> <img src="/assets/img/2019/04/Event%20Grid.png" alt="Event Grid" width="81" style="width: 81px;"></strong></p>
 </td>
 <td width="644">
-<p><a href="https://docs.microsoft.com/en-us/azure/event-grid/concepts#event-subscriptions">Event Grid Subscriptions</a> provide content-based routing on a <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#push-push-channel"><strong>Push-Push Channel</strong></a>. The list of subscriptions that get the message is defined dynamically at run time based on filters.</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/event-grid/concepts#event-subscriptions">Event Grid Subscriptions</a> provide content-based routing on a <a href="/enterprise-integration-patterns-on-azure-messaging-channels#push-push-channel"><strong>Push-Push Channel</strong></a>. The list of subscriptions that get the message is defined dynamically at run time based on filters.</p>
 </td>
 </tr>
 </tbody>
@@ -187,7 +187,7 @@ Additional information can be found in the references below:<br>
 </tbody>
 </table>
 <h2 id="load-balancer">Load Balancer (*)</h2>
-<p>The <strong>Load Balancer Pattern</strong> allows you to deliver messages to one of a set of endpoints using different load balancing policies. The difference between the <strong>Load Balancer (*)</strong> and <a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#competing-consumers" rel="noopener" target="_blank"><strong>Competing Consumers</strong></a> is that the load is distributed by a dispatcher and not by the consumers. This pattern is useful to distribute load across multiple regions or to minimise the dispatch of messages to unavailable endpoints. The most common load balancing policies are round robin, random, based on performance, and failover.</p>
+<p>The <strong>Load Balancer Pattern</strong> allows you to deliver messages to one of a set of endpoints using different load balancing policies. The difference between the <strong>Load Balancer (*)</strong> and <a href="/enterprise-integration-patterns-on-azure-endpoints#competing-consumers" rel="noopener" target="_blank"><strong>Competing Consumers</strong></a> is that the load is distributed by a dispatcher and not by the consumers. This pattern is useful to distribute load across multiple regions or to minimise the dispatch of messages to unavailable endpoints. The most common load balancing policies are round robin, random, based on performance, and failover.</p>
 <p><strong>Implementation</strong></p>
 <table>
 <tbody>
@@ -248,8 +248,8 @@ Additional information can be found in the references below:<br>
 </tbody>
 </table>
 <h2 id="first-in-first-out">First-in, First-out (*)</h2>
-<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions">Service Bus sessions</a> can be used to create a <a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-sequence"><strong>Message Sequence</strong></a> construct. The next question is, how can we make sure that the messages are processed in the intended order once they reach the receiver? The <strong>First-in, First-out (*)</strong> (FIFO) pattern intends to describe this.</p>
-<p>The <a href="https://www.enterpriseintegrationpatterns.com/">Enterprise Integration Patterns</a> book does not describe this pattern as such. It describes how to construct a <a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#message-sequence"><strong>Message Sequence</strong></a> and how to re-sequence them when required (<a href="#re-sequencer"><strong>Re-sequencer</strong></a>). But when messages are in the right order in the <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels"><strong>Messaging Channel</strong></a>, how can we make sure that they are processed in the correct order?</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions">Service Bus sessions</a> can be used to create a <a href="/enterprise-integration-patterns-on-azure-message-construction#message-sequence"><strong>Message Sequence</strong></a> construct. The next question is, how can we make sure that the messages are processed in the intended order once they reach the receiver? The <strong>First-in, First-out (*)</strong> (FIFO) pattern intends to describe this.</p>
+<p>The <a href="https://www.enterpriseintegrationpatterns.com/">Enterprise Integration Patterns</a> book does not describe this pattern as such. It describes how to construct a <a href="/enterprise-integration-patterns-on-azure-message-construction#message-sequence"><strong>Message Sequence</strong></a> and how to re-sequence them when required (<a href="#re-sequencer"><strong>Re-sequencer</strong></a>). But when messages are in the right order in the <a href="/enterprise-integration-patterns-on-azure-messaging-channels"><strong>Messaging Channel</strong></a>, how can we make sure that they are processed in the correct order?</p>
 <p>Given that the FIFO pattern has an impact on the solution throughput and complexity, alternative approaches must be considered as suggested <a href="https://toonvanhoutte.wordpress.com/2018/07/24/fifo-in-integration-scenarios/">here</a>.</p>
 <p><strong>Implementation</strong></p>
 <table>
@@ -259,9 +259,9 @@ Additional information can be found in the references below:<br>
 <p><strong> <img src="/assets/img/2019/04/Azure%20Service%20Bus_COLOR.png" alt="Azure Service Bus_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="644">
-<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#first-in-first-out-fifo-pattern" rel="noopener" target="_blank">Service Bus with Sessions</a> supports the <strong>First-in, First-out</strong> pattern thanks to its <a href="/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel"><strong>Push-Pull</strong></a> nature. However, you need to be aware that:</p>
+<p><a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/message-sessions#first-in-first-out-fifo-pattern" rel="noopener" target="_blank">Service Bus with Sessions</a> supports the <strong>First-in, First-out</strong> pattern thanks to its <a href="/enterprise-integration-patterns-on-azure-messaging-channels#push-pull-channel"><strong>Push-Pull</strong></a> nature. However, you need to be aware that:</p>
 <ul>
-<li>Parallel processing can happen when <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-partitioning" rel="noopener" target="_blank">partitions</a> or <a href="/2019/06/05/enterprise-integration-patterns-on-azure-endpoints#competing-consumers"><strong>Competing Consumers</strong></a> exist.</li>
+<li>Parallel processing can happen when <a href="https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-partitioning" rel="noopener" target="_blank">partitions</a> or <a href="/enterprise-integration-patterns-on-azure-endpoints#competing-consumers"><strong>Competing Consumers</strong></a> exist.</li>
 <li>When sessions are enabled, sequential processing is only guaranteed per session.</li>
 <li>The solution must be resilient to scenarios like <a href="https://en.wikipedia.org/wiki/Head-of-line_blocking" rel="noopener" target="_blank">head-of-line blocking</a>, or when messages that are part of the sequence fail.</li>
 </ul>
@@ -314,7 +314,7 @@ Additional information can be found in the references below:<br>
 <p><strong> <img src="/assets/img/2019/04/Logic%20Apps_COLOR.png" alt="Logic Apps_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="644">
-<p>Logic Apps allows you to send requests to multiple recipients and wait for their responses using the <a href="https://docs.microsoft.com/en-us/azure/connectors/connectors-native-webhook#add-an-http-webhook-action" rel="noopener" target="_blank">Webhook action</a>, as described <a href="https://platform.deloitte.com.au/articles/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a>. You can define a timeout to wait for the responses. The number of recipients must be known at design time.</p>
+<p>Logic Apps allows you to send requests to multiple recipients and wait for their responses using the <a href="https://docs.microsoft.com/en-us/azure/connectors/connectors-native-webhook#add-an-http-webhook-action" rel="noopener" target="_blank">Webhook action</a>, as described <a href="/correlation-identifier-pattern-on-logic-apps" rel="noopener" target="_blank">here</a>. You can define a timeout to wait for the responses. The number of recipients must be known at design time.</p>
 </td>
 </tr>
 <tr>
@@ -322,7 +322,7 @@ Additional information can be found in the references below:<br>
 <p><strong> <img src="/assets/img/2019/04/Azure%20Functions_COLOR.png" alt="Azure Functions_COLOR" width="80" style="width: 80px;"></strong></p>
 </td>
 <td width="644">
-<p>Azure Durable Functions allows us to broadcast requests, wait for their responses, and aggregate them as described in this <a href="https://platform.deloitte.com.au/articles/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">post</a>. A dynamic set of receivers can be defined at run time.</p>
+<p>Azure Durable Functions allows us to broadcast requests, wait for their responses, and aggregate them as described in this <a href="/azure-durable-functions-approval-workflow-with-sendgrid" rel="noopener" target="_blank">post</a>. A dynamic set of receivers can be defined at run time.</p>
 </td>
 </tr>
 </tbody>
@@ -360,7 +360,7 @@ Additional information can be found in the references below:<br>
 </tbody>
 </table>
 <h2 id="process-manager">Process Manager</h2>
-<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html" rel="noopener" target="_blank"><strong>Process Manager</strong></a> pattern allows us to route a message through multiple steps which are not necessarily sequential or known at design time. The <strong>Process Manager</strong> is commonly defined via a workflow or business rules and must keep a state of the processing sequence. This pattern can be subdivided into the <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography" rel="noopener" target="_blank">Orchestration and Choreography</a> patterns. The Orchestration pattern is a <strong>Process Manager</strong> that is tightly coupled to the individual steps using <a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#command-message" rel="noopener" target="_blank"><strong>Command Messages</strong></a>. In the Choreography pattern, the process manager typically uses <a href="/2019/04/10/enterprise-integration-patterns-on-azure-message-construction#event-message" rel="noopener" target="_blank"><strong>Event Messages</strong></a> to communicate with the sub-tasks so that communication is not tightly coupled.</p>
+<p>The <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/ProcessManager.html" rel="noopener" target="_blank"><strong>Process Manager</strong></a> pattern allows us to route a message through multiple steps which are not necessarily sequential or known at design time. The <strong>Process Manager</strong> is commonly defined via a workflow or business rules and must keep a state of the processing sequence. This pattern can be subdivided into the <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/choreography" rel="noopener" target="_blank">Orchestration and Choreography</a> patterns. The Orchestration pattern is a <strong>Process Manager</strong> that is tightly coupled to the individual steps using <a href="/enterprise-integration-patterns-on-azure-message-construction#command-message" rel="noopener" target="_blank"><strong>Command Messages</strong></a>. In the Choreography pattern, the process manager typically uses <a href="/enterprise-integration-patterns-on-azure-message-construction#event-message" rel="noopener" target="_blank"><strong>Event Messages</strong></a> to communicate with the sub-tasks so that communication is not tightly coupled.</p>
 <p><strong>Implementation</strong></p>
 <table>
 <tbody>
