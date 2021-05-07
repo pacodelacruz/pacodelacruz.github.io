@@ -157,7 +157,7 @@ tags: [Azure Functions, Application Insights, Azure, Observability]
 </ul>
 <h2>Wrapping Up</h2>
 <p>In this post, we’ve covered how we can implement a comprehensive tracing approach in Azure Functions, adding business-related metadata and leveraging their structured logging capabilities. We aimed to meet some of the common observability requirements that operations teams have when supporting distributed backend services.</p>
-<p>We used an approach tailored for integration solutions with Azure Functions which follow the <a href="/enterprise-integration-patterns-on-azure-messaging-channels.md#publish-subscribe-channel" rel="noopener" target="_blank">publish-subscribe integration pattern</a> and the <a href="/enterprise-integration-patterns-on-azure-routing#splitter" rel="noopener" target="_blank">splitter integration pattern</a>. However, you can leverage similar principles in your own solution.</p>
+<p>We used an approach tailored for integration solutions with Azure Functions which follow the <a href="/enterprise-integration-patterns-on-azure-messaging-channels#publish-subscribe-channel" rel="noopener" target="_blank">publish-subscribe integration pattern</a> and the <a href="/enterprise-integration-patterns-on-azure-routing#splitter" rel="noopener" target="_blank">splitter integration pattern</a>. However, you can leverage similar principles in your own solution.</p>
 <p>I hope you’ve found the series useful, and happy monitoring!</p>
 
 <p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering</span></a><br/>
