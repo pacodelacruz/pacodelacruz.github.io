@@ -6,6 +6,8 @@ author: Paco de la Cruz
 comments: true
 category: Architecture
 tags: [Architecture, Design, Draw.io, diagrams.net, stencils]
+redirect_from:
+  - /2020/06/11/azure-icons-library-diagrams-net
 ---
 
 <base target="_blank"/>
