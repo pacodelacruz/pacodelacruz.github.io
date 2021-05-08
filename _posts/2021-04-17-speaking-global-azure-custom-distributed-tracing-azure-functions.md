@@ -14,7 +14,7 @@ tags: [Serverless, Azure Functions, Application Insights, Speaking]
 
 ## Recording
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=zfuaPEK-wBk&t=8893s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/43LD7G_t33s?start=42" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Demo source code
 
