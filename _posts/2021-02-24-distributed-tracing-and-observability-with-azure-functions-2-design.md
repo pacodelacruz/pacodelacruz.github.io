@@ -194,5 +194,5 @@ tags: [Azure Functions, Application Insights, Azure, Observability]
 <h2 id="wrapping-up">Wrapping Up</h2>
 <p>In this post, we have described the design of an approach to meet common observability requirements of distributed services that run in the background using Azure Functions. In the next post of this series, we will cover how this can be implemented and how we can query and analyse the produced tracing events.</p>
 
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering</span></a><br/>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

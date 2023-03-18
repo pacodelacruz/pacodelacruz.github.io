@@ -8,7 +8,7 @@ category: Azure API Management
 tags: [Azure API Management, OAuth 2.0, Security]
 ---
 
-<h2><img src="/assets/img/passport-01.jpeg" alt="passport-01" width="1200" height="600" loading="lazy" style="height: auto; max-width: 100%; width: 1200px;"></h2>
+<h2><img src="/assets/img/2023/03/passport-01.jpeg" alt="passport" width="1200" height="600" loading="lazy" style="height: auto; max-width: 100%; width: 1200px;"></h2>
 <h2>Introduction</h2>
 <p>As part of our consulting engagements, it is common that our customers ask us to provide guidance on the different authentication and authorisation approaches available on API Management and how they meet their security needs while offering support to existing legacy API clients. While many people now know that <a href="https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-oauth2">OAuth 2.0</a> is the industry protocol for HTTP authorisation, there are cases where some API consumers don’t provide support for it. Thus, organisations need to know when alternative controls can be implemented.</p>
 <!--more-->
@@ -441,7 +441,7 @@ tags: [Azure API Management, OAuth 2.0, Security]
 <p>N/A</p>
 </td>
 <td style="border: solid windowtext 1.0pt;">
-<p>When validating JWTs, it is important to validate not only the audience but role claims as well to ensure the application has the right level of access as documented&nbsp;<a href="https://platform.deloitte.com.au/articles/oauth2-client-credentials-flow-on-azure-api-management">here</a>.&nbsp;</p>
+<p>When validating JWTs, it is important to validate not only the audience but role claims as well to ensure the application has the right level of access as documented&nbsp;<a href="/oauth2-client-credentials-flow-on-azure-api-management">here</a>.&nbsp;</p>
 </td>
 </tr>
 <tr>
@@ -510,5 +510,5 @@ tags: [Azure API Management, OAuth 2.0, Security]
 <p>I hope you’ve found this post useful and that it has provided some guidance to make your APIs more secure.</p>
 <p>Happy clouding!</p>
 <p>
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering</span></a><br/>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

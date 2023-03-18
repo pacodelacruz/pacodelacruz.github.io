@@ -68,5 +68,5 @@ Now users can query the orders submitted by a user, get the workflow run id, and
 In this post, we’ve seen how to create and publish custom queries of Logic Apps execution logs. We’ve also seen how to make easier to users to get the workflow run details of the processing of a particular business message. Now you should be ready to start creating and publishing your own custom queries and creating amazing monitoring and tracking dashboards for your Logic Apps solutions.
 
 I hope you’ve got some useful tips from this post and you’ve enjoyed it. Feel free to leave your questions or comments below,
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering Blog</span></a>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

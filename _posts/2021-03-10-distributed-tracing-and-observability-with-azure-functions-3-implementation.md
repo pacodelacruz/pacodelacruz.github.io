@@ -160,5 +160,5 @@ tags: [Azure Functions, Application Insights, Azure, Observability]
 <p>We used an approach tailored for integration solutions with Azure Functions which follow the <a href="/enterprise-integration-patterns-on-azure-messaging-channels#publish-subscribe-channel" rel="noopener" target="_blank">publish-subscribe integration pattern</a> and the <a href="/enterprise-integration-patterns-on-azure-routing#splitter" rel="noopener" target="_blank">splitter integration pattern</a>. However, you can leverage similar principles in your own solution.</p>
 <p>I hope you’ve found the series useful, and happy monitoring!</p>
 
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering</span></a><br/>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

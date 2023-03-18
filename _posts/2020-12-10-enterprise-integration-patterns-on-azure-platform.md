@@ -313,5 +313,5 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p>In this post, we have covered the Platform Management of the Enterprise Integration Patterns and how to leverage Azure to implement them. With this post, the series comes to an end. I hope you have found the whole series useful and these posts have provided some handy information for when you are architecting or implementing integration solutions on Azure. Thanks for reading and making it this far!</p>
 <p>Happy integration!</p>
 
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering</span></a><br/>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

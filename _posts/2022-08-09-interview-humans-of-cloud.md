@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interview - Humans of Cloud by my Employer
-date: 2023-08-09 10:00
+date: 2022-08-09 10:00
 author: Paco de la Cruz
 comments: true
 category: Speaking
@@ -10,7 +10,7 @@ tags: [Speaking, Cloud]
 
 My current employer ran a campaing to interview practitioners so that readers can know a bit more of what cloud professional do, not only at work but outside work. I shared some insights into my day, how I spend my time, and how Cloud is impacting the world we live in. 
 
-This is an extract of the (original post)[https://www2.deloitte.com/au/en/blog/consulting-blog/2022/meet-paco-de-la-cruz.html].  
+This is an extract of the [original post](https://www2.deloitte.com/au/en/blog/consulting-blog/2022/meet-paco-de-la-cruz.html).  
 
 <p><i>Meet Paco de la Cruz, a Melbourne-based Principal in the Cloud &amp; Engineering team. He is passionate about solving business challenges and delivering business value through cloud technologies and has been recognised as a Microsoft Azure MVP for 5 years.  </i></p>
 <p> </p>
@@ -65,6 +65,7 @@ This is an extract of the (original post)[https://www2.deloitte.com/au/en/blog/c
 <p> </p>
 <p>Also, I have to admit that I’m a bit geek and get super excited when I try or work with new services or features on Azure - that’s why I also love to share some of my knowledge by blogging or public speaking about the latest technologies I’m using or learning about. </p>
 <p> </p>
+<p><b>Let us know more about yourself</b></p>
 <ul>
 <li>Favourite physical activity? - Callisthenics, body weight exercises and nature walking.</li>
 <li>Favourite special meal? - Ribeye steak</li>

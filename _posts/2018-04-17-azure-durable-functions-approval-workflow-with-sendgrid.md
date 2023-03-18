@@ -103,5 +103,5 @@ In this post, I’ve shown how to implement an Approval Workflow (Human Interact
 
 Happy clouding!
 <p style="text-align:center;"><span style="font-style:italic;">Follow me on <a href="https://twitter.com/pacodelacruz">@pacodelacruz</a></span></p>
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering Blog</span></a></p>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering Blog</span></a></p>
 <p style="margin:0;font-family:Calibri;font-size:11pt;"></p>

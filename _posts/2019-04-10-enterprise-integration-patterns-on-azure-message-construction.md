@@ -413,5 +413,5 @@ tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Ev
 <p>In this post I have covered how to implement the Message Construction patterns using the Azure Integration Services. As we could see, in many cases, these patterns are already out-of-the-box features of the platform, and in other cases we need to take care of the implementation. Nevertheless, being aware of these challenges and the patterns which address them, allow us to be much better prepared when defining how to structure the messages for message-based enterprise integration solutions.</p>
 <p>Happy integration!&nbsp;</p>
 
-<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://platform.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Platform Engineering</span></a><br/>
+<p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>
