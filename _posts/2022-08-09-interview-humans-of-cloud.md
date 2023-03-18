@@ -8,7 +8,7 @@ category: Speaking
 tags: [Speaking, Cloud]
 ---
 
-My current employer ran a campaing to interview practitioners so that readers can know a bit more of what cloud professional do, not only at work but outside work. I shared some insights into my day, how I spend my time, and how Cloud is impacting the world we live in. 
+My current employer ran a campaign to interview practitioners so that readers can know a bit more of what cloud professional do, not only at work but outside work. I shared some insights into my day, how I spend my time, and how I believe Cloud is impacting the world we live in. 
 
 This is an extract of the [original post](https://www2.deloitte.com/au/en/blog/consulting-blog/2022/meet-paco-de-la-cruz.html).  
 
