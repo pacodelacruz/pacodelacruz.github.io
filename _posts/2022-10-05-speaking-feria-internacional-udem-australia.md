@@ -8,7 +8,7 @@ category: Speaking
 tags: [Speaking, Spanish]
 ---
 
-This presentation is in Spanish. I participated in "Feria Interacional UDEM 2023", an event dedicated to migration to Australia. In my session, I shared my personal experience as a migrant and IT professional in Australia. 
+This presentation is in Spanish. I participated in "Feria Interacional UDEM 2023", an event dedicated to migration to Australia. In my session, I shared my personal experience as a migrant and IT & cloud professional in Australia. 
 
 ## Slides
 
