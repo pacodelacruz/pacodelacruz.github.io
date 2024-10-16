@@ -22,12 +22,12 @@ In this series of posts, we'll explore the Enterprise Integration Patterns, and 
 This post is part of a series of posts outlined below:
 
 - Introduction (this)
-- [Message Construction](/2019/04/10/enterprise-integration-patterns-on-azure-message-construction)
-- [Messaging Channels](/2019/05/09/enterprise-integration-patterns-on-azure-messaging-channels)
-- [Messaging Endpoints](/2019/06/05/enterprise-integration-patterns-on-azure-endpoints)
-- [Message Routing](/2020/09/09/enterprise-integration-patterns-on-azure-routing)
-- [Message Transformation](/2020/10/07/enterprise-integration-patterns-on-azure-transformation)
-- [Platform Management](/2020/12/10/enterprise-integration-patterns-on-azure-platform)
+- [Message Construction](/enterprise-integration-patterns-on-azure-message-construction)
+- [Messaging Channels](/enterprise-integration-patterns-on-azure-messaging-channels)
+- [Messaging Endpoints](/enterprise-integration-patterns-on-azure-endpoints)
+- [Message Routing](/enterprise-integration-patterns-on-azure-routing)
+- [Message Transformation](/enterprise-integration-patterns-on-azure-transformation)
+- [Platform Management](/enterprise-integration-patterns-on-azure-platform)
 
 The remaining posts will be published in the following weeks / months. 
 

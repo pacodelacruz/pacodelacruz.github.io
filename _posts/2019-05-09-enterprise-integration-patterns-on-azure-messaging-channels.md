@@ -7,7 +7,7 @@ comments: true
 category: Architecture
 tags: [Enterprise Integration Patterns, Azure iPaaS, Logic Apps, Service Bus, Event Grid, Azure Functions]
 ---
-<p><img src="/assets/img/2019/04/Channel%203.jpeg" alt="Channel 3" width="1920" style="width: 1920px;"></p>
+<p><img src="/assets/img/2019/04/Channel3.jpeg" alt="Channel 3" width="1920" style="width: 1920px;"></p>
 <p>In the <u><a href="/enterprise-integration-patterns-on-azure-message-construction" rel="noopener" target="_blank">previous post</a> </u>of the series, I covered how application data are to be serialised and packaged into messages so they can be transmitted between applications. In this post, I’ll describe the <a href="https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageChannel.html" rel="noopener" target="_blank"><strong>Messaging Channels</strong></a> patterns, which focus on solving the challenges of transmitting messages from a sender application to the intended receiver applications; and how these patterns can be implemented on the Azure Integration Services.&nbsp;<span>Those marked with an asterisk (*) are those which are not described&nbsp;</span><a href="https://www.enterpriseintegrationpatterns.com/books1.html" rel="noopener" target="_blank">in the original book</a><span>, but I suggest to consider.</span></p>
 <!--more-->
 <p><strong>Messaging Channels</strong> can be defined statically or dynamically. Depending on different factors, different types of channels can be used. The different channels are described in the following sections.&nbsp;</p>
