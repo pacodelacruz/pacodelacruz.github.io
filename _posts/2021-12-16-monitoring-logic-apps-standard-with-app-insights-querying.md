@@ -48,7 +48,7 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <p style="text-align: center;">Figure 3. Sample query result of failed workflow instances including error code and error message</p>
 <h3>Troubleshooting a Logic App run instance</h3>
 <p>After identifying a failed instance and noting its run instance identifier, the execution details of the workflow can be seen. For that, go to the workflow run history and search by the run identifier. If the workflow is stateful, inputs and outputs of the workflow run can also be seen, as shown in the clip below. I find this functionality very useful for troubleshooting.</p>
-<p><img src="/assets/img/2021/12/211-troubleshooting.webp" alt="Opening up a workflow instance by its run identifier" width="1415" loading="lazy" style="width: 1415px;"></p>
+<p><img src="/assets/img/2021/12/211-troubleshooting.gif" alt="Opening up a workflow instance by its run identifier" width="1415" loading="lazy" style="width: 1415px;"></p>
 <p style="text-align: center;">Figure 4. Opening up a workflow instance by its run identifier</p>
 <h3>Failed Instances Count per Workflow</h3>
 <p>The query below returns the count of failed instances per workflow summarised by day.</p>
