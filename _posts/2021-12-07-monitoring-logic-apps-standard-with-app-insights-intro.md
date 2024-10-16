@@ -112,9 +112,6 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <p>The Logic Apps consumption SKU provides direct integration with Log Analytics. As described in the previous section, Logic Apps Standard is integrated with Application Insights. However, Application Insights can be configured to be <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/app/create-workspace-resource?WT.mc_id=AZ-MVP-5003116" rel="noopener" target="_blank">workspace-based</a>. In other words, all logs and metrics of multiple Applications Insights instances can be ingested and aggregated into one Log Analytics workspace. This allows running queries across multiple Application Insights instances aggregates in the same workspace.</p>
 <h2>Wrapping Up</h2>
 <p>In this post, we’ve covered the different built-in observability features that we get in Logic Apps Standard. In the <a href="/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank">next post</a> of the series, we will see how these features can be leveraged and implemented using a sample solution.</p>
-<p style="text-align: center;"><em>Cross-posted on<span>&nbsp;</span><a href="https://pacodelacruz.io/" rel="noopener" target="_blank">Paco's blog</a></em></p>
-<p style="text-align: center;"><em>Follow Paco on<span>&nbsp;</span><a href="https://twitter.com/pacodelacruz" rel="noopener" target="_blank">@pacodelacruz</a></em></p>
-<p style="text-align: center;">&nbsp;</p>
 
 <p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>
