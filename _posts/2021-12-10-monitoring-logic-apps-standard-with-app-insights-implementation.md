@@ -8,7 +8,7 @@ category: Logic Apps
 tags: [Logic Apps, Application Insights, Azure, Observability]
 ---
 
-<p><img src="https://f.hubspotusercontent30.net/hubfs/3451034/pdelacruz/202112/100-astronaut.jpg" alt="Monitoring Logic Apps Standard with Application Insights - Implementation" width="800" loading="lazy" style="width: 800px;"></p>
+<p><img src="/assets/img/2021/12/100-astronaut.webp" alt="Monitoring Logic Apps Standard with Application Insights - Implementation" width="800" loading="lazy" style="width: 800px;"></p>
 <h2>Overview</h2>
 <p>In the <a href="/articles/monitoring-logic-apps-standard-with-app-insights-intro" rel="noopener" target="_blank">previous post</a> of the series, we’ve covered the different built-in observability features that are available in Logic Apps Standard and how many of them are part of the traces sent to Application Insights. In this post, we’ll discuss how these features can be implemented in a sample scenario. The series is structured as outlined below:</p>
 <!--more-->
@@ -21,7 +21,7 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <h2>Scenario</h2>
 <p>To demonstrate how to leverage these observability features in Logic Apps, I’ll use a very common integration scenario: the publishing and consumption of user updated events. Think of an HR or CRM system pushing user updated events via webhooks for downstream systems to consume.</p>
 <p>To better illustrate the scenario, let’s describe the different components of the end-to-end solution.</p>
-<p><img src="https://f.hubspotusercontent30.net/hubfs/3451034/pdelacruz/202112/101-participants-01.png" alt="Sample scenario components" width="1621" loading="lazy" style="width: 1621px;"></p>
+<p><img src="/assets/img/2021/12/101-participants-01.webp" alt="Sample scenario components" width="1621" loading="lazy" style="width: 1621px;"></p>
 <p style="text-align: center;">Figure 1. Sample scenario components</p>
 <p style="text-align: center;">&nbsp;</p>
 <ul>
@@ -34,7 +34,7 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 </ul>
 <h2>Publisher Workflow</h2>
 <p>The figure below shows the Logic App publisher workflow.</p>
-<p><img src="https://f.hubspotusercontent30.net/hubfs/3451034/pdelacruz/202112/110-workflow-pub-00.png" alt="Publisher workflow" width="766" loading="lazy" style="width: 766px;"></p>
+<p><img src="/assets/img/2021/12/110-workflow-pub-00.webp" alt="Publisher workflow" width="766" loading="lazy" style="width: 766px;"></p>
 <p style="text-align: center;">Figure 2. Publisher workflow</p>
 <p style="text-align: center;">&nbsp;</p>
 <p>The workflow’s steps are described as follows:</p>
@@ -75,13 +75,13 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <ol>
 <li>Application Insights integration is enabled for the Logic App.</li>
 </ol>
-<img src="https://f.hubspotusercontent30.net/hubfs/3451034/pdelacruz/202112/071-app-insights.png" alt="Enabling Application Insights integration" width="822" loading="lazy" style="width: 822px;"><br>
+<img src="/assets/img/2021/12/071-app-insights.webp" alt="Enabling Application Insights integration" width="822" loading="lazy" style="width: 822px;"><br>
 <p style="text-align: center;">Figure 3. Enabling Application Insights integration</p>
 <p style="text-align: center;">&nbsp;</p>
 <ol start="2">
 <li>A custom tracking id is being logged using a property in the JSON trigger body. This configuration and and code behind are shown below.</li>
 </ol>
-<p><img src="https://f.hubspotusercontent30.net/hubfs/3451034/pdelacruz/202112/031-custom-tracking-id.png" alt="Configuring the custom tracking id property" width="1149" loading="lazy" style="width: 1149px;"></p>
+<p><img src="/assets/img/2021/12/031-custom-tracking-id.webp" alt="Configuring the custom tracking id property" width="1149" loading="lazy" style="width: 1149px;"></p>
 <p style="text-align: center;">Figure 4. Configuring the custom tracking id property</p>
 <p style="text-align: center;">&nbsp;</p>
 <pre>"triggers": {<br> &nbsp;&nbsp;&nbsp;"manual":&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"correlation":&nbsp;{<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"clientTrackingId":&nbsp;"@{coalesce(triggerBody()?['id'],&nbsp;guid())}"<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"inputs":&nbsp;{},<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"kind":&nbsp;"Http",<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"type":&nbsp;"Request"<br> &nbsp;&nbsp;&nbsp;}<br>}</pre>
@@ -106,7 +106,7 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <p style="text-align: center;">Code snippet 4. Using a <code>terminate</code> action with custom error code and error message</p>
 <h2>Subscriber Workflow</h2>
 <p>The figure below shows the Logic App subscriber workflow.</p>
-<p><img src="https://f.hubspotusercontent30.net/hubfs/3451034/pdelacruz/202112/111-workflow-sub-00.png" alt="Subscriber workflow" width="581" loading="lazy" style="width: 581px; margin-left: auto; margin-right: auto; display: block;"></p>
+<p><img src="/assets/img/2021/12/111-workflow-sub-00.webp" alt="Subscriber workflow" width="581" loading="lazy" style="width: 581px; margin-left: auto; margin-right: auto; display: block;"></p>
 <p style="text-align: center;">Figure 5. Subscriber workflow</p>
 <p style="text-align: center;">&nbsp;</p>
 <p style="text-align: justify;">The workflow steps are described as follows.</p>
