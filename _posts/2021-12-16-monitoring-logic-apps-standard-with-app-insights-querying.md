@@ -11,7 +11,7 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <p><img src="/assets/img/2021/12/200-radio-telescope.webp" alt="Monitoring Logic Apps Standard with Application Insights – Querying &amp; Analysing Traces Part 3/3" width="800" loading="lazy" style="width: 800px;"></p>
 <h2>Overview</h2>
 <!--more-->
-<p>In the <a href="/articles/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank">previous post</a> of the series, we covered how to implement the different observability features that are available in Logic Apps Standard to send traces to Application Insights. In this post, we’ll discuss how to query and analyse these traces, and how to share these queries and publish query results. The series is structured as outlined below:</p>
+<p>In the <a href="/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank">previous post</a> of the series, we covered how to implement the different observability features that are available in Logic Apps Standard to send traces to Application Insights. In this post, we’ll discuss how to query and analyse these traces, and how to share these queries and publish query results. The series is structured as outlined below:</p>
 <ul>
 <li><a href="/monitoring-logic-apps-standard-with-app-insights-intro" rel="noopener" target="_blank"><strong>Introduction</strong></a> – describes the built-in observability features available in Logic Apps Standard.</li>
 <li><a href="/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank"><strong>Reference implementation</strong></a> – shows how these features can be leveraged and implemented.</li>

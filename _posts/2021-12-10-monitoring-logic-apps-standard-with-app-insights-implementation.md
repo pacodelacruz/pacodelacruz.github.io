@@ -10,12 +10,12 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 
 <p><img src="/assets/img/2021/12/100-astronaut.webp" alt="Monitoring Logic Apps Standard with Application Insights - Implementation" width="800" loading="lazy" style="width: 800px;"></p>
 <h2>Overview</h2>
-<p>In the <a href="/articles/monitoring-logic-apps-standard-with-app-insights-intro" rel="noopener" target="_blank">previous post</a> of the series, we’ve covered the different built-in observability features that are available in Logic Apps Standard and how many of them are part of the traces sent to Application Insights. In this post, we’ll discuss how these features can be implemented in a sample scenario. The series is structured as outlined below:</p>
+<p>In the <a href="/monitoring-logic-apps-standard-with-app-insights-intro" rel="noopener" target="_blank">previous post</a> of the series, we’ve covered the different built-in observability features that are available in Logic Apps Standard and how many of them are part of the traces sent to Application Insights. In this post, we’ll discuss how these features can be implemented in a sample scenario. The series is structured as outlined below:</p>
 <!--more-->
 <ol>
-<li><a href="/articles/monitoring-logic-apps-standard-with-app-insights-intro" rel="noopener" target="_blank"><strong>Introduction </strong></a>&nbsp;– describes the built-in observability features available in Logic Apps Standard.</li>
+<li><a href="/monitoring-logic-apps-standard-with-app-insights-intro" rel="noopener" target="_blank"><strong>Introduction </strong></a>&nbsp;– describes the built-in observability features available in Logic Apps Standard.</li>
 <li><strong>Sample implementation (this article)</strong> – shows how these features can be leveraged and implemented.</li>
-<li><a href="/articles/monitoring-logic-apps-standard-with-app-insights-querying" rel="noopener" target="_blank"><strong>Querying and analysing Logic Apps traces</strong></a> – shows how to query and analyse Logic Apps application traces, and how to publish and share queries and charts.</li>
+<li><a href="/monitoring-logic-apps-standard-with-app-insights-querying" rel="noopener" target="_blank"><strong>Querying and analysing Logic Apps traces</strong></a> – shows how to query and analyse Logic Apps application traces, and how to publish and share queries and charts.</li>
 </ol>
 <p>The code of the solution shown in this post is available <a href="https://github.com/pacodelacruz/observability-pubsub-logicapps/blob/main/user-updated-pub/workflow.json" rel="noopener" target="_blank">on GitHub</a>.</p>
 <h2>Scenario</h2>
@@ -152,7 +152,7 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <li>Likewise, when applicable, a <code>terminate</code> action with <code>failed</code> status is used with a custom error code and error message.</li>
 </ol>
 <h2>Wrapping-Up</h2>
-<p>In this post, I’ve described a sample implementation of a publish-subscribe scenario using Logic App Standard and how the different observability practices described previously can be implemented in the corresponding workflows. In the <a href="/articles/monitoring-logic-apps-standard-with-app-insights-querying" rel="noopener" target="_blank">next and final post of the series</a>, I’ll describe how the different traces that result from these practices can be queried and analysed using <a href="https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/?WT.mc_id=AZ-MVP-5003116" rel="noopener" target="_blank">Kusto Query Language</a>.</p>
+<p>In this post, I’ve described a sample implementation of a publish-subscribe scenario using Logic App Standard and how the different observability practices described previously can be implemented in the corresponding workflows. In the <a href="/monitoring-logic-apps-standard-with-app-insights-querying" rel="noopener" target="_blank">next and final post of the series</a>, I’ll describe how the different traces that result from these practices can be queried and analysed using <a href="https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/?WT.mc_id=AZ-MVP-5003116" rel="noopener" target="_blank">Kusto Query Language</a>.</p>
 
 <p style="text-align:center;"><span style="font-style:italic;">Cross-posted on </span><a href="https://engineering.deloitte.com.au/articles/author/paco-de-la-cruz"><span style="font-style:italic;">Deloitte Engineering</span></a><br/>
 <span style="font-style:italic;">Follow me on </span><a href="https://twitter.com/pacodelacruz"><span style="font-style:italic;">@pacodelacruz</span></a></p>

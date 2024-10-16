@@ -17,8 +17,8 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <p>Throughout this series, I want to share what I’ve found. I aim to provide insights so that architects and developers can incorporate observability practices when designing and building Logic Apps solutions. The series is structured as outlined below:</p>
 <ol>
 <li><strong>Introduction (this article)</strong> – describes the built-in observability features available in Logic Apps Standard.</li>
-<li><a href="/articles/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank"><strong>Reference implementation</strong></a> – shows how these features can be leveraged and implemented.</li>
-<li><a href="/articles/monitoring-logic-apps-standard-with-app-insights-querying" rel="noopener" target="_blank"><strong>Querying and analysing Logic Apps traces</strong></a> – shows how to query and analyse Logic Apps application traces, and how to publish and share queries and charts.</li>
+<li><a href="/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank"><strong>Reference implementation</strong></a> – shows how these features can be leveraged and implemented.</li>
+<li><a href="/monitoring-logic-apps-standard-with-app-insights-querying" rel="noopener" target="_blank"><strong>Querying and analysing Logic Apps traces</strong></a> – shows how to query and analyse Logic Apps application traces, and how to publish and share queries and charts.</li>
 </ol>
 <p>This series describes in detail what I recently presented at the Azure Serverless Conference.</p>
 <p>&nbsp;</p>
@@ -111,7 +111,7 @@ tags: [Logic Apps, Application Insights, Azure, Observability]
 <h2>Log Analytics Integration</h2>
 <p>The Logic Apps consumption SKU provides direct integration with Log Analytics. As described in the previous section, Logic Apps Standard is integrated with Application Insights. However, Application Insights can be configured to be <a href="https://docs.microsoft.com/en-us/azure/azure-monitor/app/create-workspace-resource?WT.mc_id=AZ-MVP-5003116" rel="noopener" target="_blank">workspace-based</a>. In other words, all logs and metrics of multiple Applications Insights instances can be ingested and aggregated into one Log Analytics workspace. This allows running queries across multiple Application Insights instances aggregates in the same workspace.</p>
 <h2>Wrapping Up</h2>
-<p>In this post, we’ve covered the different built-in observability features that we get in Logic Apps Standard. In the <a href="/articles/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank">next post</a> of the series, we will see how these features can be leveraged and implemented using a sample solution.</p>
+<p>In this post, we’ve covered the different built-in observability features that we get in Logic Apps Standard. In the <a href="/monitoring-logic-apps-standard-with-app-insights-implementation" rel="noopener" target="_blank">next post</a> of the series, we will see how these features can be leveraged and implemented using a sample solution.</p>
 <p style="text-align: center;"><em>Cross-posted on<span>&nbsp;</span><a href="https://pacodelacruz.io/" rel="noopener" target="_blank">Paco's blog</a></em></p>
 <p style="text-align: center;"><em>Follow Paco on<span>&nbsp;</span><a href="https://twitter.com/pacodelacruz" rel="noopener" target="_blank">@pacodelacruz</a></em></p>
 <p style="text-align: center;">&nbsp;</p>
