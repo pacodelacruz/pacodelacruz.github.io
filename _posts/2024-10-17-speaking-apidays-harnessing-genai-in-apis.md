@@ -19,6 +19,10 @@ I had the opportunity of presenting in API Days Australia 2024! During my talk, 
 
 You can check out the slides, recording, and the link to the code repo I used in my demo right below.
 
+## Recording
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/St2S2tdIhgE?si=e2c-h4kyXiWCxOBz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Slides
 
 <iframe src="https://www.slideshare.net/slideshow/embed_code/key/hF5q77sImFJ49n?hostedIn=slideshare&page=upload" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
@@ -27,7 +31,5 @@ You can check out the slides, recording, and the link to the code repo I used in
 
 [https://github.com/pacodelacruz/openai-business-rules-engine-demo](https://github.com/pacodelacruz/openai-business-rules-engine-demo)
 
-## Recording
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/St2S2tdIhgE?si=e2c-h4kyXiWCxOBz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 

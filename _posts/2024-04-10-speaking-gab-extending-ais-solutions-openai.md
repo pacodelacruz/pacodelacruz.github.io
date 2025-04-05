@@ -8,7 +8,7 @@ category: Speaking
 tags: [Speaking, Logic Apps, Open AI, GenAI]
 ---
 
-I was honoured to be part of the Global Azure Bootcamp 2024 in Melbourne! During my session, I dived into how you can extend Azure Integration Services solutions with Open AI. You can find the slides and the links to the code repo I used in my demo right below. 
+I was honoured to be part of the Global Azure Bootcamp 2024 in Melbourne! During my session, I dived into how you can extend Azure Integration Services solutions with Open AI. You can find the slides and the link to the code repo I used in my demo right below. 
 
 
 ## Slides
