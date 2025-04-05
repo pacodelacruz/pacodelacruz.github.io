@@ -10,7 +10,7 @@ tags: [Speaking, Azure, Open AI, GenAI, APIs]
 
 Generative AI and Large Language Models (LLMs) are becoming increasingly important in software engineering and modern applications. Their promise is compelling, offering significant productivity boosts and intelligent user interactions. But can we leverage LLMs beyond just chatbots? Can we enhance enterprise APIs and make them smarter?
 
-I had the opportunity of presenting in API Days Australia 2024! During my talk, I 
+I had the opportunity of presenting in [API Days Australia 2024](https://www.youtube.com/playlist?list=PLmEaqnTJ40OopENl7zu7D36imdFzq0d2-)! During my talk, I 
 
 - Explored potential use cases of LLMs within APIs.
 - Demonstrated a GenAI infused API application through a live demo.
